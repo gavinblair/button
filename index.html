@@ -185,7 +185,7 @@ body {
 <body>
 
 <input type="checkbox" name="btn" id="btn">
-<label class="btn" for="btn"></label>
+<label class="btn"></label>
 
   <script src="//code.jquery.com/jquery-latest.js"></script>
 
@@ -197,6 +197,7 @@ body {
 jQuery("document").ready(function($){
  $(".btn").touchstart(function(){
     $(this).toggleClass("checked");
+    return false;
  });
 });
 
