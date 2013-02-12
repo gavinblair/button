@@ -195,8 +195,8 @@ body {
 //Inspired by http://dribbble.com/shots/693683-iOS-App-Icon-Switch?list=popular&offset=148
 
 jQuery("document").ready(function($){
- $(".btn").touchstart(function(){
- 	alert("Gav");
+ $(".btn").bind('touchstart',function() {
+ //	alert("Gav");
     $(this).toggleClass("checked");
     return false;
  });
