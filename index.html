@@ -4,7 +4,6 @@
 <head>
 
   <meta charset="UTF-8">
-<script src="http://debug.phonegap.com/target/target-script-min.js#button"></script>
 
   <style>
 
@@ -197,8 +196,8 @@ body {
 (function($){
     $(document).ready(function(){
  $(".btn").bind('touchstart',function() {
- //	alert("Gav");
-    $(this).toggleClass("checked");
+ 	
+    $("#btn").toggleClass("checked");
     return false;
  });
  });
