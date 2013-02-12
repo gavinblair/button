@@ -1,19 +1,17 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 
   <meta charset="UTF-8">
-
-  <title>switch:button::real - CodePen</title>
+<script src="http://debug.phonegap.com/target/target-script-min.js#button"></script>
 
   <style>
-@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -57,7 +55,7 @@ body {
 }
 
 /* switch button: on + glow in the dark */
-#btn:checked ~ .btn {
+#btn.checked ~ .btn {
 	background: linear-gradient(bottom, #e9e4e0 0%,rgba(255,255,255,0.1) 3%), linear-gradient(top, #e5e0d8 0%,#f9f6f1 100%);
 
 	box-shadow: 0px -4px 0px #d2cdc4 inset, 0px -3px 0px #e5e0d8, 0px 0px 0px 4px #777069, 0px -2px 0px 4px #777069, 0px 0px 0px 10px #f9f6f2, 0px -2px 0px 10px #f9f6f2, 0px 0px 0px 11px #f0ebe7, 0px -2px 0px 11px #f0ebe7, 0px 0px 0px 20px #f9f6f2, 0px 4px 1px 20px #e4e1dc, 0px -4px 0px 20px #fdfcfb, 0px 4px 20px 20px #000, 150px 0 100px rgba(240, 240, 0, 0);
@@ -105,7 +103,7 @@ body {
 }
 
 /* switch button - led: on */
-#btn:checked ~ .btn:after {
+#btn.checked ~ .btn:after {
   margin: 14px 37px;
   background: rgba(248, 214, 8, .9);
   box-shadow: 
@@ -134,7 +132,6 @@ body {
 /* click */
 #btn:before {
   position:absolute;
-  content:'click!';
   left:150px;
   color:rgba(0, 0, 0 , .5);
 
@@ -143,12 +140,11 @@ body {
 }
 
 /* dark room */
-#btn:checked:after {
+#btn.checked:after {
   background: rgba(0, 0, 0, .4);
 }
 
-#btn:checked:before {
-  content:':D';
+#btn.checked:before {
   color: rgba(248, 214, 8, .1);
   text-shadow: 
     0 0 4px rgba(248, 214, 8, .2),
@@ -189,7 +185,7 @@ body {
 <body>
 
 <input type="checkbox" name="btn" id="btn">
-<label class="btn" for="btn"></label>
+<label class="btn"></label>
 
   <script src="//code.jquery.com/jquery-latest.js"></script>
 
@@ -197,6 +193,16 @@ body {
 (function() {
 
 //Inspired by http://dribbble.com/shots/693683-iOS-App-Icon-Switch?list=popular&offset=148
+
+(function($){
+    $(document).ready(function(){
+ $(".btn").bind('touchstart',function() {
+ //	alert("Gav");
+    $(this).toggleClass("checked");
+    return false;
+ });
+ });
+    })(jQuery); 
 
 /**
   Forked: "Switch Button Single element" by "M Naufal"
