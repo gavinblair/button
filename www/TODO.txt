@@ -1,0 +1,5 @@
+new game / settings graphics
+javascript listeners for gamecentre invites
+create match gamecentre
+start match gamecentre
+settings page
