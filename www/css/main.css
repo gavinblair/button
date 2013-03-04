@@ -226,7 +226,7 @@ ul {
     -webkit-transform: rotate(45deg);
     -webkit-animation: mask-two 15s linear infinite;
 }
-
+/*
 @-webkit-keyframes inner {
     0% {
       -webkit-transform: rotate(-45deg);
@@ -288,6 +288,7 @@ ul {
       -webkit-filter: sepia() hue-rotate(360deg) contrast(95%);
     }
   }
+  */
 
 #game .avatar img {
     border-radius: 999px;
