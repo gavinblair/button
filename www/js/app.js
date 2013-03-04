@@ -11,7 +11,7 @@ document.addEventListener( "DOMContentLoaded", function(){
 	//fastclick
 	//new FastClick(document.getElementById('container'));
 
-	document.getElementById('container').innerHTML = ich.game({ /**///lobby
+	document.getElementById('container').innerHTML = ich.lobby({ /**///lobby
 
 	});
 	
