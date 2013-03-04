@@ -9,7 +9,7 @@ document.addEventListener( "DOMContentLoaded", function(){
 	//dom ready
 
 	//fastclick
-	new FastClick(document.getElementById('container'));
+	//new FastClick(document.getElementById('container'));
 
 	document.getElementById('container').innerHTML = ich.game({ /**///lobby
 
@@ -23,4 +23,8 @@ function newgame(){
 }
 function settings(){
 	document.getElementById('container').innerHTML = ich.settings();
+}
+function buttonclick(){
+	el = document.getElementById('thebutton');
+	el.className = (new RegExp( "off" )).test( el.className ) ? el.className.replace( (new RegExp( "off" )), "" ) : el.className + " " + "off"; el.className = el.className.trim();
 }

@@ -69,24 +69,16 @@
 		</script>
 		<script type="text/html" id="game">
 			<div class='page' id='game'>
-				<div class='meter'>
-					<div class="donut" data-percentage="100">
-					    <div class="donut-bow"></div>
-					    <div class="donut-arrow"></div>
-					</div>
+				<div class='avatar'>
+					<div class='spinner-inner'></div>
+					<div class='spinner-mask'></div>
+					<div class='spinner-mask-two'></div>
+					<img src='https://twimg0-a.akamaihd.net/profile_images/2784807168/5e2a5a84c49314804b94ad007cf09317.jpeg' />
 				</div>
-				<div class='meter'>
-					<div class="donut donut-big" data-percentage="100">
-					    <div class="donut-bow"></div>
-					    <div class="donut-arrow"></div>
-					</div>
-				</div>
-				<div class='button'>
-					<div class='power off' ontouchstart='this.className = (new RegExp( "off" )).test( this.className ) ? this.className.replace( (new RegExp( "off" )), "" ) : this.className + " " + "off"; this.className = this.className.trim();'>
-						<span class='icon-off'></span>
-						<span class='light'></span>
-				  </div>
-				</div>
+				<strong>Your Turn</strong>
+				<br />
+				<em>What will you do?</em>
+				<div class='button' id='thebutton' ontouchstart='buttonclick()'></div>
 			</div>
 		</script>
 		<script type="text/html" id="settings">
@@ -94,6 +86,7 @@
 				settings
 			</div>
 		</script>
+
 
 	</head>
 	<body>
