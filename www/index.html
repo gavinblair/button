@@ -69,6 +69,18 @@
 		</script>
 		<script type="text/html" id="game">
 			<div class='page' id='game'>
+				<div class='meter'>
+					<div class="donut" data-percentage="100">
+					    <div class="donut-bow"></div>
+					    <div class="donut-arrow"></div>
+					</div>
+				</div>
+				<div class='meter'>
+					<div class="donut donut-big" data-percentage="100">
+					    <div class="donut-bow"></div>
+					    <div class="donut-arrow"></div>
+					</div>
+				</div>
 				<div class='button'>
 					<div class='power off' ontouchstart='this.className = (new RegExp( "off" )).test( this.className ) ? this.className.replace( (new RegExp( "off" )), "" ) : this.className + " " + "off"; this.className = this.className.trim();'>
 						<span class='icon-off'></span>
