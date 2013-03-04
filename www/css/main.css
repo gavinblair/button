@@ -168,13 +168,18 @@ ul {
     font-size: .75em;
 }
 /* avatars in game */
-
+#game .players {
+    margin: 0 auto 1em auto;
+    width: 200px;
+}
 #game .avatar {
     -webkit-mask-box-image: -webkit-radial-gradient( center,ellipse cover, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 69.5%);
     background: #4ecc4e;
     width: 76px;
     height: 76px;
     position: relative;
+    margin: 0 .5em;
+    float: left;
 }
 .spinner-inner {
     position: absolute;
