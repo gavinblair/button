@@ -21,10 +21,6 @@
     margin: 0 .5em;
     float: left;
 }
-#game .avatar.turn {
-  -webkit-animation-fill-mode: both;
-  -webkit-animation: wobble 5s infinite;
-}
 #game .avatar.punch{
   -webkit-animation-fill-mode: both;
   -webkit-animation: wobble 5s infinite;
@@ -52,7 +48,7 @@
     border-color: transparent;
     border-top-color: #fff;
     -webkit-transform: rotate(-45deg);
-    -webkit-animation: inner 15s linear infinite;
+    -webkit-animation: inner 60s linear infinite;
     -webkit-animation-play-state:paused;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
@@ -69,7 +65,7 @@
     border-color: transparent;
     border-top-color: #4ecc4e;
     -webkit-transform: rotate(-45deg);
-    -webkit-animation: mask 15s linear infinite;
+    -webkit-animation: mask 60s linear infinite;
     -webkit-animation-play-state:paused;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
@@ -89,7 +85,7 @@
     border-color: transparent;
     border-top-color: #fff;
     -webkit-transform: rotate(45deg);
-    -webkit-animation: mask-two 15s linear infinite;
+    -webkit-animation: mask-two 60s linear infinite;
     -webkit-animation-play-state:paused;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;

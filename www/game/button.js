@@ -41,6 +41,26 @@ var buttonGame = function(){
 	buttonGame.prototype.start = function(){
 		setState("Starting Game...");
 		buttonGame.prototype.buttonClick();
+
+		(function loop() {
+		    var rand = Math.round(Math.random() * (5000 - 500)) + 500;
+		    setTimeout(function() {
+		    		if(!$('#thebutton').hasClass('off')){
+		            	buttonGame.prototype.punch($('.avatar')[0]);
+		            }
+		            loop();  
+		    }, rand);
+		}());
+
+		(function loop() {
+		    var rand = Math.round(Math.random() * (10000 - 500)) + 500;
+		    setTimeout(function() {
+		            if($('#thebutton').hasClass('off')){
+		            	buttonGame.prototype.buttonClick();
+		            }
+		            loop();  
+		    }, rand);
+		}());
 	};
 
 	function setState(state){
@@ -61,15 +81,16 @@ var buttonGame = function(){
 		//stop everything
 		$('.avatar').children("div").each(function(){ this.style.webkitAnimationPlayState = "paused"; });
 
-		$('.avatar.turn').removeClass('turn');
 		if(buttonGame.prototype.state == "Your Turn"){
 			i = 1;
 			setState("Waiting...");
-			buttonGame.prototype.punch('.avatar:nth-child(2)');
+			//remove the click handler
+			$('#thebutton').attr('ontouchstart', '');
 		} else {
 			i = 0;
 			setState("Your Turn");
-			$('.avatar:nth-child(1)').addClass('turn');
+			//add the handler back in
+			$('#thebutton').attr('ontouchstart', 'app.game.buttonClick()');
 		}
 
 		document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();
