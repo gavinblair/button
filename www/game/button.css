@@ -34,6 +34,9 @@
     border-top-color: #fff;
     -webkit-transform: rotate(-45deg);
     -webkit-animation: inner 15s linear infinite;
+    -webkit-animation-play-state:paused;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
 }
 .spinner-mask {
     position: absolute;
@@ -48,6 +51,9 @@
     border-top-color: #4ecc4e;
     -webkit-transform: rotate(-45deg);
     -webkit-animation: mask 15s linear infinite;
+    -webkit-animation-play-state:paused;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
 }
 .spinner-mask:after, .spinner-mask-two {
     display: block;
@@ -65,8 +71,11 @@
     border-top-color: #fff;
     -webkit-transform: rotate(45deg);
     -webkit-animation: mask-two 15s linear infinite;
+    -webkit-animation-play-state:paused;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
 }
-/*
+
 @-webkit-keyframes inner {
     0% {
       -webkit-transform: rotate(-45deg);
@@ -128,7 +137,7 @@
       -webkit-filter: sepia() hue-rotate(360deg) contrast(95%);
     }
   }
-  */
+  
 
 #game .avatar img {
     border-radius: 999px;

@@ -25,6 +25,7 @@ var gameManager = function(game){
 	gameManager.prototype.newGame = function(){
 		if(game.canStart) {
 			document.getElementById('container').innerHTML = ich.game();
+			game.start();
 		}
 	}
 	gameManager.prototype.showSettings = function(){
