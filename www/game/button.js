@@ -40,6 +40,7 @@ var buttonGame = function(){
 
 	buttonGame.prototype.start = function(){
 		setState("Starting Game...");
+		buttonGame.prototype.buttonClick();
 	};
 
 	function setState(state){
