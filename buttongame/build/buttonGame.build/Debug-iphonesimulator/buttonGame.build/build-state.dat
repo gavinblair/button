@@ -1,0 +1,605 @@
+TbuttonGame
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist buttonGame/buttonGame-Info.plist
+cPhaseScriptExecution "Copy www directory" /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh
+cCpResource buttonGame/Resources/icons/icon-72.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png
+cCpResource buttonGame/config.xml /Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml
+cCpResource buttonGame/Resources/icons/icon.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png
+cCpResource buttonGame/Resources/icons/icon@2x.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png
+cCpResource buttonGame/Resources/Capture.bundle /Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle
+cCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj/Localizable.strings buttonGame/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj/Localizable.strings buttonGame/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib
+cCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj/Localizable.strings buttonGame/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj/Localizable.strings buttonGame/Resources/se.lproj/Localizable.strings
+cCpResource buttonGame/Resources/splash/Default-Landscape@2x~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png
+cCpResource buttonGame/Resources/splash/Default-Landscape~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png
+cCpResource buttonGame/Resources/splash/Default-Portrait@2x~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png
+cCpResource buttonGame/Resources/splash/Default-Portrait~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png
+cCpResource buttonGame/Resources/splash/Default@2x~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png
+cCpResource buttonGame/Resources/splash/Default~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png
+cCpResource buttonGame/Resources/splash/Default-568h@2x~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png
+cProcessPCH /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth buttonGame/buttonGame-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o /Users/podcast/Sites/button/buttongame/buttonGame/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o /Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame normal i386
+cGenerateDSYMFile /Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame
+cTouch /Users/podcast/sites/button/buttongame/build/buttonGame.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000005136143A00000000001EB540
+t1362498618
+s2012480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c000000005136143900000000000C1030
+t1362498617
+s790576
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c00000000513614390000000000193640
+t1362498617
+s1652288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c000000005136143900000000000226E0
+t1362498617
+s141024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000005136143A00000000003D4DF0
+t1362498618
+s4017648
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000005136143A0000000000215DB0
+t1362498618
+s2186672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005136143A0000000000228FE0
+t1362498618
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000005136143A000000000009C590
+t1362498618
+s640400
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000005136143A0000000000085620
+t1362498618
+s546336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005136143B00000000003DDFA0
+t1362498619
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c000000005136143D00000000002DBA50
+t1362498621
+s2996816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000005136143E00000000000BCC20
+t1362498622
+s773152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000005136143F00000000001D5750
+t1362498623
+s1922896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000005136143F000000000006CC50
+t1362498623
+s445520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000513614410000000000AB6230
+t1362498625
+s11231792
+
+N/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/buttonGame.LinkFileList
+c00000000513615920000000000000195
+t1362498962
+s405
+
+N/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh
+c0000000051361592000000000000042B
+t1362498962
+s1067
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m
+c00000000513603E8000000000000122C
+t1362494440
+s4652
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m
+c00000000513603E8000000000000126B
+t1362494440
+s4715
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib
+c00000000513603E80000000000001759
+t1362494440
+s5977
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/Capture.bundle
+c00000000513603E8000000000000030E
+t1362494440
+s782
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/de.lproj/Localizable.strings
+c00000000513603E80000000000000485
+t1362494440
+s1157
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/en.lproj/Localizable.strings
+c00000000513603E80000000000000470
+t1362494440
+s1136
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/es.lproj/Localizable.strings
+c00000000513603E8000000000000047D
+t1362494440
+s1149
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon-72.png
+c00000000513603E80000000000001350
+t1362494440
+s4944
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon.png
+c00000000513603E80000000000000F3E
+t1362494440
+s3902
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon@2x.png
+c00000000513603E80000000000001EBD
+t1362494440
+s7869
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/se.lproj/Localizable.strings
+c00000000513603E80000000000000471
+t1362494440
+s1137
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-568h@2x~iphone.png
+c00000000513603E800000000000074F8
+t1362494440
+s29944
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Landscape@2x~ipad.png
+c00000000513603E80000000000012735
+t1362494440
+s75573
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Landscape~ipad.png
+c00000000513603E8000000000000817B
+t1362494440
+s33147
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Portrait@2x~ipad.png
+c00000000513603E80000000000012171
+t1362494440
+s74097
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Portrait~ipad.png
+c00000000513603E80000000000007F9A
+t1362494440
+s32666
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default@2x~iphone.png
+c00000000513603E80000000000007323
+t1362494440
+s29475
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default~iphone.png
+c00000000513603E8000000000000289A
+t1362494440
+s10394
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/buttonGame-Prefix.pch
+c00000000513603E800000000000003C5
+t1362494440
+s965
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/config.xml
+c00000000513603E80000000000000B13
+t1362494440
+s2835
+
+N/Users/podcast/Sites/button/buttongame/buttonGame/main.m
+c00000000513603E8000000000000045C
+t1362494440
+s1116
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/MainViewController.nib
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/PkgInfo
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/podcast/sites/button/buttongame/build/libCordova.a
+c000000005136159200000000003486C8
+t1362498962
+s3442376
+
+N/var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth
+t2
+s0
+
+NbuttonGame/buttonGame-Info.plist
+c00000000513603E800000000000009CF
+t1362494440
+s2511
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies381218124de6b641^8c8119124de6b641^---0#1#0#--18"Check dependencies36"BD0FF5FD-E103-4B8F-993D-BA16FE33E632-
+
+CCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o /Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384191771.024759
+e384191771.199414
+r1
+xCompileC
+xbuild/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o
+x/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
+o    self.viewController.useSplashScreen = YES;
+o                        ^
+o/Users/podcast/sites/button/buttongame/build/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here
+o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
+o                                              ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.mac71061b4de6b641^950d331b4de6b641^-668"/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/podcast/sites/button/buttongame/build/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-384191771#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-384191771#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@96"file://localhost/Users/podcast/sites/button/buttongame/build/include/Cordova/CDVViewController.h0000000000000000^46#46#46#46#1832#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@87"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m0000000000000000^67#24#67#24#2267#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@87"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m0000000000000000^3460"CompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o buttonGame/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/podcast/Sites/button/buttongame    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-generated-files.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-own-target-headers.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-all-target-headers.hmap -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-project-headers.hmap -I/Users/podcast/sites/button/buttongame/build/include -I/Users/podcast/sites/button/buttongame/build/usr/local/lib/include -I/Users/podcast/Sites/button/buttongame/build/UninstalledProducts/include -I/Users/podcast/sites/button/buttongame/build -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources/i386 -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources -F/Users/podcast/sites/button/buttongame/build -include /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch -MMD -MT dependencies -MF /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.dia -c /Users/podcast/Sites/button/buttongame/buttonGame/Classes/AppDelegate.m -o /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/AppDelegate.o36"D98081FE-7788-46ED-BAF4-59CFB44C3194-
+
+CCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384191771.024769
+e384191771.094579
+r1
+xCompileC
+xbuild/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o
+x/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.mc170061b4de6b641^ce35181b4de6b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m0000000000000000^3502"CompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o buttonGame/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/podcast/Sites/button/buttongame    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-generated-files.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-own-target-headers.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-all-target-headers.hmap -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-project-headers.hmap -I/Users/podcast/sites/button/buttongame/build/include -I/Users/podcast/sites/button/buttongame/build/usr/local/lib/include -I/Users/podcast/Sites/button/buttongame/build/UninstalledProducts/include -I/Users/podcast/sites/button/buttongame/build -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources/i386 -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources -F/Users/podcast/sites/button/buttongame/build -include /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch -MMD -MT dependencies -MF /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.dia -c /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.m -o /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/MainViewController.o36"36222D61-6B5D-4A1C-B4F3-6FD651FAA0CA-
+
+CCompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o /Users/podcast/Sites/button/buttongame/buttonGame/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384191771.023956
+e384191771.050422
+r1
+xCompileC
+xbuild/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o
+x/Users/podcast/Sites/button/buttongame/buttonGame/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/podcast/Sites/button/buttongame/buttonGame/main.m7041061b4de6b641^ffe70c1b4de6b641^---0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/main.m0000000000000000^3402"CompileC build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o buttonGame/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/podcast/Sites/button/buttongame    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-generated-files.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-own-target-headers.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-all-target-headers.hmap -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-project-headers.hmap -I/Users/podcast/sites/button/buttongame/build/include -I/Users/podcast/sites/button/buttongame/build/usr/local/lib/include -I/Users/podcast/Sites/button/buttongame/build/UninstalledProducts/include -I/Users/podcast/sites/button/buttongame/build -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources/i386 -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources -F/Users/podcast/sites/button/buttongame/build -include /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch -MMD -MT dependencies -MF /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.dia -c /Users/podcast/Sites/button/buttongame/buttonGame/main.m -o /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/main.o36"34EA72BF-31D7-458C-90BD-7A807C651622-
+
+CCompileXIB /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib
+s384191762.412769
+e384191770.691172
+r1
+xCompileXIB
+x/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib
+o2013-03-05 10:56:10.026 Interface Builder Cocoa Touch Tool[48278:14603] CFPreferences: user home directory at file://localhost/Users/podcast/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compiling /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib76c469124de6b641^58feb01a4de6b641^-242"2013-03-05 10:56:10.026 Interface Builder Cocoa Touch Tool[48278:14603] CFPreferences: user home directory at file://localhost/Users/podcast/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib0000000000000000^961"CompileXIB buttonGame/Classes/MainViewController.xib    cd /Users/podcast/Sites/button/buttongame    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/podcast/sites/button/buttongame/build/buttonGame.app/MainViewController.nib /Users/podcast/Sites/button/buttongame/buttonGame/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"73ED8B95-8A6A-4908-A350-1936CE8F4C31-
+
+CCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj/Localizable.strings buttonGame/Resources/de.lproj/Localizable.strings
+s384191762.416779
+e384191762.527561
+r1
+xCopyStringsFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj/Localizable.strings
+xbuttonGame/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy buttonGame/Resources/de.lproj/Localizable.strings9fc96a124de6b641^5e0e87124de6b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Resources/de.lproj/Localizable.strings0000000000000000^667"CopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj/Localizable.strings buttonGame/Resources/de.lproj/Localizable.strings    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/podcast/sites/button/buttongame/build/buttonGame.app/de.lproj -- buttonGame/Resources/de.lproj/Localizable.strings36"CD61AE84-7D55-450B-9515-AA0532D88D0E-
+
+CCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj/Localizable.strings buttonGame/Resources/en.lproj/Localizable.strings
+s384191762.409846
+e384191762.415447
+r1
+xCopyStringsFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj/Localizable.strings
+xbuttonGame/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy buttonGame/Resources/en.lproj/Localizable.strings4b0569124de6b641^ab5a6a124de6b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Resources/en.lproj/Localizable.strings0000000000000000^667"CopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj/Localizable.strings buttonGame/Resources/en.lproj/Localizable.strings    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/podcast/sites/button/buttongame/build/buttonGame.app/en.lproj -- buttonGame/Resources/en.lproj/Localizable.strings36"461C8A07-4C1D-4390-A602-5CADDCEA09FA-
+
+CCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj/Localizable.strings buttonGame/Resources/es.lproj/Localizable.strings
+s384191762.411602
+e384191762.419816
+r1
+xCopyStringsFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj/Localizable.strings
+xbuttonGame/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy buttonGame/Resources/es.lproj/Localizable.strings507069124de6b641^b7796b124de6b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Resources/es.lproj/Localizable.strings0000000000000000^667"CopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj/Localizable.strings buttonGame/Resources/es.lproj/Localizable.strings    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/podcast/sites/button/buttongame/build/buttonGame.app/es.lproj -- buttonGame/Resources/es.lproj/Localizable.strings36"A6599BBA-266D-4433-9C6F-1473415DF7FA-
+
+CCopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj/Localizable.strings buttonGame/Resources/se.lproj/Localizable.strings
+s384191762.421069
+e384191762.528475
+r1
+xCopyStringsFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj/Localizable.strings
+xbuttonGame/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy buttonGame/Resources/se.lproj/Localizable.strings4cdf6b124de6b641^994a87124de6b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/Resources/se.lproj/Localizable.strings0000000000000000^667"CopyStringsFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj/Localizable.strings buttonGame/Resources/se.lproj/Localizable.strings    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/podcast/sites/button/buttongame/build/buttonGame.app/se.lproj -- buttonGame/Resources/se.lproj/Localizable.strings36"544F9871-8335-49C1-BF5C-D90E5E77CD76-
+
+CCpResource buttonGame/Resources/Capture.bundle /Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle
+s384191762.409672
+e384191762.419839
+r1
+xCpResource
+xbuttonGame/Resources/Capture.bundle
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle23f368124de6b641^c37e6b124de6b641^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle000000000080d041^669"CpResource buttonGame/Resources/Capture.bundle /Users/podcast/sites/button/buttongame/build/buttonGame.app/Capture.bundle    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/podcast/Sites/button/buttongame/buttonGame/Resources/Capture.bundle /Users/podcast/sites/button/buttongame/build/buttonGame.app36"0411B18C-8CF7-4A95-8C08-1E3620080B3A-
+
+CCpResource buttonGame/Resources/icons/icon-72.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png
+s384191762.405632
+e384191762.408371
+r1
+xCpResource
+xbuttonGame/Resources/icons/icon-72.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.pnga3ea67124de6b641^548b68124de6b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png000000000080d041^672"CpResource buttonGame/Resources/icons/icon-72.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon-72.png    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon-72.png /Users/podcast/sites/button/buttongame/build/buttonGame.app36"D39F4B6C-0D60-4D8B-8F47-964857D60A28-
+
+CCpResource buttonGame/Resources/icons/icon.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png
+s384191762.406096
+e384191762.410447
+r1
+xCpResource
+xbuttonGame/Resources/icons/icon.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png890b68124de6b641^621369124de6b641^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png000000000080d041^663"CpResource buttonGame/Resources/icons/icon.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon.png    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon.png /Users/podcast/sites/button/buttongame/build/buttonGame.app36"B55A9F34-B7DC-4D08-AAF7-77B5B674A5CA-
+
+CCpResource buttonGame/Resources/icons/icon@2x.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png
+s384191762.406106
+e384191762.411509
+r1
+xCpResource
+xbuttonGame/Resources/icons/icon@2x.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.pngbb0b68124de6b641^645869124de6b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png000000000080d041^678"CpResource "buttonGame/Resources/icons/icon@2x.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/icon@2x.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/icons/icon@2x.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"3410440E-1296-423F-B0EB-D92BE73ABAF7-
+
+CCpResource buttonGame/Resources/splash/Default-568h@2x~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png
+s384191762.454247
+e384191762.457071
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default-568h@2x~iphone.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.pngff5874124de6b641^ea0375124de6b641^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png000000000080d041^725"CpResource "buttonGame/Resources/splash/Default-568h@2x~iphone.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-568h@2x~iphone.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-568h@2x~iphone.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"C1C75BED-103A-4C2F-8C66-291C42EC1823-
+
+CCpResource buttonGame/Resources/splash/Default-Landscape@2x~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png
+s384191762.421070
+e384191762.423888
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default-Landscape@2x~ipad.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.pnga0df6b124de6b641^40846c124de6b641^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png000000000080d041^734"CpResource "buttonGame/Resources/splash/Default-Landscape@2x~ipad.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape@2x~ipad.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Landscape@2x~ipad.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"BF8EF0BF-8265-46D2-B45A-D4AA3FD91183-
+
+CCpResource buttonGame/Resources/splash/Default-Landscape~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png
+s384191762.426749
+e384191762.436770
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default-Landscape~ipad.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png00fd6e124de6b641^d0d06f124de6b641^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png000000000080d041^725"CpResource "buttonGame/Resources/splash/Default-Landscape~ipad.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Landscape~ipad.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Landscape~ipad.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"F0D1E53B-30C2-4C25-A569-3EB2AE518158-
+
+CCpResource buttonGame/Resources/splash/Default-Portrait@2x~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png
+s384191762.438157
+e384191762.440826
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default-Portrait@2x~ipad.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.pngbc3d70124de6b641^2bda70124de6b641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png000000000080d041^731"CpResource "buttonGame/Resources/splash/Default-Portrait@2x~ipad.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait@2x~ipad.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Portrait@2x~ipad.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"D09B2D20-6639-4689-B984-1B9FDD74A46E-
+
+CCpResource buttonGame/Resources/splash/Default-Portrait~ipad.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png
+s384191762.442123
+e384191762.444921
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default-Portrait~ipad.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png4f3e71124de6b641^bce671124de6b641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png000000000080d041^722"CpResource "buttonGame/Resources/splash/Default-Portrait~ipad.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default-Portrait~ipad.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default-Portrait~ipad.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"13228514-250E-424E-8FA1-4A4000B82C87-
+
+CCpResource buttonGame/Resources/splash/Default@2x~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png
+s384191762.446183
+e384191762.448885
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default@2x~iphone.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png0a4972124de6b641^e6eb72124de6b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png000000000080d041^710"CpResource "buttonGame/Resources/splash/Default@2x~iphone.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default@2x~iphone.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default@2x~iphone.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"3BA1F889-E552-47D4-BE42-EC922F8A4664-
+
+CCpResource buttonGame/Resources/splash/Default~iphone.png /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png
+s384191762.450212
+e384191762.452961
+r1
+xCpResource
+xbuttonGame/Resources/splash/Default~iphone.png
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.pngf05173124de6b641^94f573124de6b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png000000000080d041^701"CpResource "buttonGame/Resources/splash/Default~iphone.png" "/Users/podcast/sites/button/buttongame/build/buttonGame.app/Default~iphone.png"    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/podcast/Sites/button/buttongame/buttonGame/Resources/splash/Default~iphone.png" /Users/podcast/sites/button/buttongame/build/buttonGame.app36"590F5461-28D5-40B5-96FD-48E55B29B38B-
+
+CCpResource buttonGame/config.xml /Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml
+s384191762.405698
+e384191762.409505
+r1
+xCpResource
+xbuttonGame/config.xml
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy /Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml3dee67124de6b641^b7d568124de6b641^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml000000000080d041^637"CpResource buttonGame/config.xml /Users/podcast/sites/button/buttongame/build/buttonGame.app/config.xml    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/podcast/Sites/button/buttongame/buttonGame/config.xml /Users/podcast/sites/button/buttongame/build/buttonGame.app36"A1AEE4E3-C984-442D-8EA1-0005649EA2D3-
+
+CGenerateDSYMFile /Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame
+s384191772.184000
+e384191772.349909
+r1
+xGenerateDSYMFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Generate /Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM2c2d2f1c4de6b641^0c93591c4de6b641^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM000000000080d041^692"GenerateDSYMFile /Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame -o /Users/podcast/sites/button/buttongame/build/buttonGame.app.dSYM36"7BDF67C7-AFC0-48E4-BE1D-D7806A656D30-
+
+CLd /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame normal i386
+s384191771.207241
+e384191772.176280
+r1
+xLd
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Link /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame1c27351b4de6b641^07242d1c4de6b641^---0#0#0#--1672"Ld /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame normal i386    cd /Users/podcast/Sites/button/buttongame    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/podcast/sites/button/buttongame/build -F/Users/podcast/sites/button/buttongame/build -filelist /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/buttonGame.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/podcast/sites/button/buttongame/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/podcast/sites/button/buttongame/build/buttonGame.app/buttonGame36"1BE55331-E716-44B3-B797-83AAA1D1FD78-
+
+CPhaseScriptExecution "Copy www directory" /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh
+s384191762.118734
+e384191762.396734
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.256s
+ouser	0m0.017s
+osys	0m0.044s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'e08220124de6b641^e19865124de6b641^-42"real	0m0.256suser	0m0.017ssys	0m0.044s3(21%IDEActivityLogMessage2@14"real	0m0.256s-384191762#1#14#-0#-----2@14"user	0m0.017s-384191762#15#14#-0#-----2@13"sys	0m0.044s-384191762#29#13#-0#-----0#0#0#--20338"PhaseScriptExecution "Copy www directory" build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh    cd /Users/podcast/Sites/button/buttongame    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER podcast    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/podcast/Sites/button/buttongame/build    setenv BUILD_ROOT /Users/podcast/Sites/button/buttongame/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/podcast/sites/button/buttongame/build    setenv CACHE_ROOT /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503    setenv CCHROOT /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/podcast/sites/button/buttongame/build/buttonGame.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/podcast/sites/button/buttongame/build    setenv CONFIGURATION_TEMP_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH buttonGame.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH buttonGame.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/buttonGame.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME buttonGame.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/podcast/sites/button/buttongame/build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH buttonGame.app/Executables    setenv EXECUTABLE_FOLDER_PATH buttonGame.app    setenv EXECUTABLE_NAME buttonGame    setenv EXECUTABLE_PATH buttonGame.app/buttonGame    setenv FILE_LIST /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH buttonGame.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/podcast/sites/button/buttongame/build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME buttonGame.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER buttonGame/buttonGame-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/podcast/sites/button/buttongame/build/include\" \"/Users/podcast/sites/button/buttongame/build/usr/local/lib/include\" \"/Users/podcast/Sites/button/buttongame/build/UninstalledProducts/include\" \"/Users/podcast/sites/button/buttongame/build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE buttonGame/buttonGame-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH buttonGame.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH buttonGame.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/buttonGame.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER podcast    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/buttonGame.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH buttonGame.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/podcast/sites/button/buttongame/build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal/i386/buttonGame.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH buttonGame.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11G63    setenv MAC_OS_X_VERSION_ACTUAL 1075    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0705    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Objects-normal    setenv OBJROOT /Users/podcast/Sites/button/buttongame/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH buttonGame.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/PkgInfo    setenv PKGINFO_PATH buttonGame.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH buttonGame.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH buttonGame.app/PrivateHeaders    setenv PRODUCT_NAME buttonGame    setenv PRODUCT_SETTINGS_PATH /Users/podcast/Sites/button/buttongame/buttonGame/buttonGame-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT buttonGame    setenv PROJECT_DERIVED_FILE_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/DerivedSources    setenv PROJECT_DIR /Users/podcast/Sites/button/buttongame    setenv PROJECT_FILE_PATH /Users/podcast/Sites/button/buttongame/buttonGame.xcodeproj    setenv PROJECT_NAME buttonGame    setenv PROJECT_TEMP_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build    setenv PROJECT_TEMP_ROOT /Users/podcast/Sites/button/buttongame/build    setenv PUBLIC_HEADERS_FOLDER_PATH buttonGame.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/podcast/sites/button/buttongame/build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH buttonGame.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/podcast/sites/button/buttongame/build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH buttonGame.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH buttonGame.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/podcast/Sites/button/buttongame    setenv SRCROOT /Users/podcast/Sites/button/buttongame    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/podcast/Sites/button/buttongame/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME buttonGame    setenv TARGET_BUILD_DIR /Users/podcast/sites/button/buttongame/build    setenv TARGET_NAME buttonGame    setenv TARGET_TEMP_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build    setenv TEMP_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build    setenv TEMP_FILES_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build    setenv TEMP_FILE_DIR /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build    setenv TEMP_ROOT /Users/podcast/Sites/button/buttongame/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 503    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH buttonGame.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER podcast    setenv USER_APPS_DIR /Users/podcast/Applications    setenv USER_LIBRARY_DIR /Users/podcast/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH buttonGame.app/version.plist    setenv VERSION_INFO_BUILDER podcast    setenv VERSION_INFO_FILE buttonGame_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:buttonGame  PROJECT:buttonGame-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME buttonGame.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H127    setenv XCODE_VERSION_ACTUAL 0460    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/Script-304B58A110DAC018002A0835.sh36"B76B9322-A748-4010-8C83-6B62DF18372D-
+
+CProcessInfoPlistFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist buttonGame/buttonGame-Info.plist
+s384191762.106395
+e384191762.110562
+r1
+xProcessInfoPlistFile
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist
+xbuttonGame/buttonGame-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Process buttonGame/buttonGame-Info.plistab5d1b124de6b641^a94d1c124de6b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/buttonGame-Info.plist0000000000000000^703"ProcessInfoPlistFile /Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist buttonGame/buttonGame-Info.plist    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-infoPlistUtility buttonGame/buttonGame-Info.plist -genpkginfo /Users/podcast/sites/button/buttongame/build/buttonGame.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/podcast/sites/button/buttongame/build/buttonGame.app/Info.plist36"E3DC7E23-8909-4795-B725-CB13809A617B-
+
+CProcessPCH /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth buttonGame/buttonGame-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384191770.699946
+e384191771.017339
+r1
+xProcessPCH
+x/var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth
+xbuttonGame/buttonGame-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile buttonGame/buttonGame-Prefix.pche65bb31a4de6b641^156f041b4de6b641^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/podcast/Sites/button/buttongame/buttonGame/buttonGame-Prefix.pch0000000000000000^3460"ProcessPCH /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth buttonGame/buttonGame-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/podcast/Sites/button/buttongame    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-generated-files.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-own-target-headers.hmap -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-all-target-headers.hmap -iquote /Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/buttonGame-project-headers.hmap -I/Users/podcast/sites/button/buttongame/build/include -I/Users/podcast/sites/button/buttongame/build/usr/local/lib/include -I/Users/podcast/Sites/button/buttongame/build/UninstalledProducts/include -I/Users/podcast/sites/button/buttongame/build -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources/i386 -I/Users/podcast/Sites/button/buttongame/build/buttonGame.build/Debug-iphonesimulator/buttonGame.build/DerivedSources -F/Users/podcast/sites/button/buttongame/build --serialize-diagnostics /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.dia -c /Users/podcast/Sites/button/buttongame/buttonGame/buttonGame-Prefix.pch -o /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/q6/hz_ppg0s4ws9jxwgvxnh7vp40000gq/C/com.apple.Xcode.503/SharedPrecompiledHeaders/buttonGame-Prefix-clkruqoqyqtlpjdtwtjamtkexpgv/buttonGame-Prefix.pch.d36"B5D98B55-2BE2-4B4C-A245-1E5A30069FB8-
+
+CTouch /Users/podcast/sites/button/buttongame/build/buttonGame.app
+s384191772.358523
+e384191772.389376
+r1
+xTouch
+x/Users/podcast/sites/button/buttongame/build/buttonGame.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Touch /Users/podcast/sites/button/buttongame/build/buttonGame.appc2df5b1c4de6b641^8aae631c4de6b641^---0#0#0#--448"Touch /Users/podcast/sites/button/buttongame/build/buttonGame.app    cd /Users/podcast/Sites/button/buttongame    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/touch -c /Users/podcast/sites/button/buttongame/build/buttonGame.app36"AECBAA80-A3E3-43E8-8066-640011EA462F-
+

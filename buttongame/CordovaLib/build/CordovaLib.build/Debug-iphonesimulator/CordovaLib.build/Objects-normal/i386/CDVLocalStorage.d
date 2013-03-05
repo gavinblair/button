@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVLocalStorage.m \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVLocalStorage.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVPlugin.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVAvailability.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVInvokedUrlCommand.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDV.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVViewController.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVWhitelist.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVScreenOrientationDelegate.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVURLProtocol.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVAccelerometer.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVBattery.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVCamera.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVCapture.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVFile.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVConnection.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVReachability.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVContact.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVContacts.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVDebug.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVDebugConsole.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVDevice.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVFileTransfer.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVLocation.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVNotification.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVSound.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVSplashScreen.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVInAppBrowser.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/NSArray+Comparisons.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/NSData+Base64.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/NSDictionary+Extensions.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/UIDevice+Extensions.h \
+  /Users/podcast/Sites/button/buttongame/CordovaLib/Classes/CDVJSON.h

@@ -1,0 +1,24 @@
+
+-gamecenter-
+use tutorial to add functionality to plugin
+javascript listeners for gamecentre invites
+create match gamecentre
+start match gamecentre
+push notifications
+
+-game-
+app.showPage("howtoplay")
+gamemanager settings
+game settings
+detect game over
+debug (from settings)
+make .thumb:active work
+sound effects
+app.toggleSounds()
+disable scrolling when not needed
+preload player images
+ability to reset either counter to a specific value (in case of sync issues)
+(pie charts occasionally disappear :()
+
+other.gav@gmail.com
+gavinblair+humanbeings@gmail.com

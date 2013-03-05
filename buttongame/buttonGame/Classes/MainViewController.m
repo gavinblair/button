@@ -26,6 +26,7 @@
 //
 
 #import "MainViewController.h"
+#import "AppDelegate.h"
 
 @implementation MainViewController
 
@@ -46,9 +47,11 @@
     self = [super init];
     if (self) {
         // Uncomment to override the CDVCommandDelegateImpl used
-        // _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];
+        _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];
         // Uncomment to override the CDVCommandQueue used
         // _commandQueue = [[MainCommandQueue alloc] initWithViewController:self];
+       
+
     }
     return self;
 }
@@ -75,6 +78,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+   
 }
 
 - (void)viewDidUnload

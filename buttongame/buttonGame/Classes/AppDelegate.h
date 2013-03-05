@@ -28,6 +28,7 @@
 #import <UIKit/UIKit.h>
 
 #import <Cordova/CDVViewController.h>
+#import "GCHelper.h"
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>{}
 
