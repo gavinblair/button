@@ -1,6 +1,5 @@
 /* game */
 #game {
-  padding-top: 5em;
   text-align: center;
 }
 #game em {
@@ -195,7 +194,7 @@
   background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
   color: #a7a7a7;
-  margin: 50px auto;
+  margin: 45px auto;
   width: 144px;
   height: 144px;
   position: relative;
@@ -239,5 +238,6 @@
     color: #ff6162;
 }
 .button.off:after {
-    color: #4ecc4e;
+    color: #999;
 }
+

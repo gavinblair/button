@@ -44,6 +44,11 @@
 
 		<script src="js/lib/swipe.min.js"></script>
 
+		<script type="text/html" id="nav">
+			<nav>
+				<img src='img/back.png' onclick='app.backToLobby()'>
+			</nav>
+		</script>
 		<script type="text/html" id="lobby">
 			<div class='page' id='lobby'>
 				<ul>
@@ -68,7 +73,15 @@
 				</ul>
 			</div>
 		</script>
-
+		<script type="text/html" id="settings">
+			<div class='page' id='settings'>
+				{{>nav}}
+				{{>gamesettings}}
+				<ul>
+					<li onclick='app.toggleSounds()'>Sounds (on)</li>
+				</ul>
+			</div>
+		</script>
 	</head>
 	<body>
 		

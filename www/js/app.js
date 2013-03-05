@@ -13,7 +13,7 @@ var gameManager = function(game){
 		//dom ready
 
 		//fastclick
-		//new FastClick(document.getElementById('container'));
+		new FastClick(document.getElementById('container'));
 
 		document.getElementById('container').innerHTML = ich.lobby({ /**///lobby
 
@@ -21,6 +21,8 @@ var gameManager = function(game){
 		
 
 	}, false );
+
+
 
 	gameManager.prototype.newGame = function(){
 		if(game.canStart) {
@@ -30,6 +32,9 @@ var gameManager = function(game){
 	}
 	gameManager.prototype.showSettings = function(){
 		document.getElementById('container').innerHTML = ich.settings();
+	}
+	gameManager.prototype.backToLobby = function(){
+		document.getElementById('container').innerHTML = ich.lobby();
 	}
 
 };

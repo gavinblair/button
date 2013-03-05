@@ -129,8 +129,7 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    padding-bottom: 60px;
-
+    padding-bottom: 0;
 }
 
 body {
@@ -152,9 +151,25 @@ ul {
     margin-right: 1em;
     cursor: pointer;
 }
-.thumb:active, .thumb:hover, .thumb:focus {
+.thumb:hover {
     opacity: .75;
 }
+
+/* nav */
+nav {
+  height: 2em;
+  text-align: left;
+  padding: .5em;
+}
+nav img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+nav img:hover {
+    opacity: .75;
+}
+
 
 
 

@@ -1,5 +1,19 @@
-new game / settings graphics
+
+-gamecenter-
+set up cordova project in xcode (installing xcode now)
+install javascript gamecenter plugin
+use tutorial to add functionality to plugin
 javascript listeners for gamecentre invites
 create match gamecentre
 start match gamecentre
-settings page
+push notifications
+
+-game-
+app.showPage("howtoplay")
+gamemanager settings
+game settings
+detect game over
+debug (from settings)
+make .thumb:active work
+sound effects
+app.toggleSounds()
