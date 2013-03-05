@@ -46,6 +46,13 @@ var buttonGame = function(){
 		document.getElementById('state').innerHTML = buttonGame.prototype.state = state;
 	}
 
+	buttonGame.prototype.punch = function(el) {
+		$(el).removeClass('punch');
+		setTimeout(function(){
+			$(el).addClass('punch');
+		}, 0);
+	}
+
 	buttonGame.prototype.buttonClick = function(){
 		el = document.getElementById('thebutton');
 		el.className = (new RegExp( "off" )).test( el.className ) ? el.className.replace( (new RegExp( "off" )), "" ) : el.className + " " + "off"; el.className = el.className.trim();
@@ -53,12 +60,15 @@ var buttonGame = function(){
 		//stop everything
 		$('.avatar').children("div").each(function(){ this.style.webkitAnimationPlayState = "paused"; });
 
+		$('.avatar.turn').removeClass('turn');
 		if(buttonGame.prototype.state == "Your Turn"){
 			i = 1;
 			setState("Waiting...");
+			buttonGame.prototype.punch('.avatar:nth-child(2)');
 		} else {
 			i = 0;
 			setState("Your Turn");
+			$('.avatar:nth-child(1)').addClass('turn');
 		}
 
 		document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();

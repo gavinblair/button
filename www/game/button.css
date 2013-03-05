@@ -21,6 +21,25 @@
     margin: 0 .5em;
     float: left;
 }
+#game .avatar.turn {
+  -webkit-animation-fill-mode: both;
+  -webkit-animation: wobble 5s infinite;
+}
+#game .avatar.punch{
+  -webkit-animation-fill-mode: both;
+  -webkit-animation: wobble 5s infinite;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble {
+  0% { -webkit-transform: translateX(0%); }
+  1.5% { -webkit-transform: translateX(-25%) rotate(-5deg); }
+  3.0% { -webkit-transform: translateX(20%) rotate(3deg); }
+  4.5% { -webkit-transform: translateX(-15%) rotate(-3deg); }
+  6.0% { -webkit-transform: translateX(10%) rotate(2deg); }
+  7.5% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  10.0% { -webkit-transform: translateX(0%); }
+}
 .spinner-inner {
     position: absolute;
     top: 0;
@@ -149,6 +168,9 @@
     margin-top: 7px;
     top: 0;
 }
+
+
+
 
 /* button */
 
