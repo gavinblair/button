@@ -1,9 +1,6 @@
 
 -gamecenter-
-use tutorial to add functionality to plugin
-javascript listeners for gamecentre invites
-create match gamecentre
-start match gamecentre
+starting the game
 push notifications
 
 -game-

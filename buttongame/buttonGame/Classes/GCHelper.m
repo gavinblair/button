@@ -10,13 +10,17 @@
 #import "MainViewController.h"
 #import "AppDelegate.h"
 
+NSString *javascriptMessage = @"";
+
 @implementation GCHelper
 
 @synthesize gameCenterAvailable;
-
+@synthesize userAuthenticated;
 @synthesize presentingViewController;
 @synthesize match;
+@synthesize matchStarted;
 @synthesize delegate;
+@synthesize playersDict;
 
 #pragma mark Initialization
 
@@ -26,6 +30,15 @@ static GCHelper *sharedHelper = nil;
         sharedHelper = [[GCHelper alloc] init];
     }
     return sharedHelper;
+}
+
+- (void)sendData:(NSData *)data {
+    NSError *error;
+    BOOL success = [[GCHelper sharedInstance].match sendDataToAllPlayers:data withDataMode:GKMatchSendDataReliable error:&error];
+    if (!success) {
+        NSLog(@"Error sending init packet");
+        [self matchEnded];
+    }
 }
 
 
@@ -45,7 +58,10 @@ static GCHelper *sharedHelper = nil;
 - (id)init {
     if ((self = [super init])) {
         gameCenterAvailable = [self isGameCenterAvailable];
-        NSMutableString *message = [NSMutableString stringWithString:@""];
+        javascriptMessage = @"";
+        userAuthenticated = false;
+        matchStarted = false;
+        
         if (gameCenterAvailable) {
             NSNotificationCenter *nc =
             [NSNotificationCenter defaultCenter];
@@ -57,12 +73,6 @@ static GCHelper *sharedHelper = nil;
     }
     return self;
 }
-
--(void) setMessage:(NSMutableString *) msg{
-    message = msg;
-    
-}
-
 - (void)authenticationChanged {
     
     if ([GKLocalPlayer localPlayer].isAuthenticated && !userAuthenticated) {
@@ -72,6 +82,34 @@ static GCHelper *sharedHelper = nil;
         NSLog(@"Authentication changed: player not authenticated");
         userAuthenticated = FALSE;
     }
+    
+}
+
+- (void)lookupPlayers {
+    
+    NSLog(@"Looking up %d players...", self.match.playerIDs.count);
+    [GKPlayer loadPlayersForIdentifiers:self.match.playerIDs withCompletionHandler:^(NSArray *players, NSError *error) {
+        
+        if (error != nil) {
+            NSLog(@"Error retrieving player info: %@", error.localizedDescription);
+            matchStarted = NO;
+            [delegate matchEnded];
+        } else {
+            
+            // Populate players dict
+            self.playersDict = [NSMutableDictionary dictionaryWithCapacity:players.count];
+            for (GKPlayer *player in players) {
+                NSLog(@"Found player: %@", player.alias);
+                [playersDict setObject:player forKey:player.playerID];
+            }
+            
+            // Notify delegate match can begin
+            matchStarted = YES;
+            javascriptMessage = @"Match Started";
+            [delegate matchHasStarted];
+            
+        }
+    }];
     
 }
 
@@ -124,6 +162,7 @@ static GCHelper *sharedHelper = nil;
 - (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFailWithError:(NSError *)error {
     [presentingViewController dismissModalViewControllerAnimated:YES];
     NSLog(@"Error finding match: %@", error.localizedDescription);
+    javascriptMessage = @"Error finding match";
 }
 
 // A peer-to-peer match has been found, the game should start
@@ -132,19 +171,15 @@ static GCHelper *sharedHelper = nil;
     self.match = theMatch;
     match.delegate = self;
     if (!matchStarted && match.expectedPlayerCount == 0) {
-        NSLog(@"Ready to start match!");
-        [self setMessage:@"Ready to start match!"];
+        NSLog(@"nslog Ready to start match!");
+        javascriptMessage = @"Ready to start match!";
+        [self lookupPlayers];
     }
 }
 
 #pragma mark GKMatchDelegate
 
-// The match received data sent from the player.
-- (void)match:(GKMatch *)theMatch didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
-    if (match != theMatch) return;
-    NSLog(@"got some data up in here");
-    [delegate match:theMatch didReceiveData:data fromPlayer:playerID];
-}
+
 
 // The player state changed (eg. connected or disconnected)
 - (void)match:(GKMatch *)theMatch player:(NSString *)playerID didChangeState:(GKPlayerConnectionState)state {
@@ -154,20 +189,38 @@ static GCHelper *sharedHelper = nil;
         case GKPlayerStateConnected:
             // handle a new player connection.
             NSLog(@"Player connected!");
+            javascriptMessage = @"Player connected";
             
             if (!matchStarted && theMatch.expectedPlayerCount == 0) {
-                NSLog(@"Ready to start match!");
-                
+                NSLog(@"nslog2 Ready to start match!");
+                javascriptMessage = @"2 Ready to start match!";
+                [self lookupPlayers];
             }
             
             break;
         case GKPlayerStateDisconnected:
             // a player just disconnected.
             NSLog(@"Player disconnected!");
+            javascriptMessage = @"Player disconnected";
             matchStarted = NO;
             [delegate matchEnded];
             break;
     }
+}
+
+// on "dealloc" you need to release all your retained objects
+- (void) dealloc
+{
+	// in case you have something to dealloc, do it in this method
+	// in this particular example nothing needs to be released.
+	// cocos2d will automatically release all the children (Label)
+    [otherPlayerID release];
+    otherPlayerID = nil;
+    
+    //[sharedHelper release];
+    
+	// don't forget to call "super dealloc"
+	[super dealloc];
 }
 
 // The match was unable to connect with the player due to an error.
@@ -176,6 +229,7 @@ static GCHelper *sharedHelper = nil;
     if (match != theMatch) return;
     
     NSLog(@"Failed to connect to player with error: %@", error.localizedDescription);
+    javascriptMessage = @"Failed to connect to player with error";
     matchStarted = NO;
     [delegate matchEnded];
 }
@@ -186,34 +240,73 @@ static GCHelper *sharedHelper = nil;
     if (match != theMatch) return;
     
     NSLog(@"Match failed with error: %@", error.localizedDescription);
+    javascriptMessage = @"Match failed with error";
     matchStarted = NO;
     [delegate matchEnded];
 }
 
-- (void)matchStarted {
+- (void)matchHasStarted {
     NSLog(@"Match started");
+    javascriptMessage = @"Match started";
+    
 }
 
 - (void)matchEnded {
     NSLog(@"Match ended");
+    javascriptMessage = @"Match ended";
+    
+    // Disconnects match and ends level
+    [[GCHelper sharedInstance].match disconnect];
+    [GCHelper sharedInstance].match = nil;
 }
 
 - (void)getMatch:(CDVInvokedUrlCommand*)command
 {
-    //CDVPluginResult* pluginResult = nil;
     
     AppDelegate * delegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     [[GCHelper sharedInstance] findMatchWithMinPlayers:2 maxPlayers:2 viewController:delegate.viewController delegate:self];
     
-    //pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"HELL YES"];
-    //[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 - (void)getMessage:(CDVInvokedUrlCommand*)command{
     CDVPluginResult* pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:javascriptMessage];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
+
+- (void)sendMessage:(CDVInvokedUrlCommand*)command{
+    NSString* msg = [command.arguments objectAtIndex:0];
+    
+    NSLog(@"Send: %@", msg);
+    
+    //send data
+    NSData* data = [msg dataUsingEncoding:NSUTF8StringEncoding];
+    [self sendData:data];
+    
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:javascriptMessage];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+// The match received data sent from the player.
+- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
+    
+    // Store away other player ID for later
+    if (otherPlayerID == nil) {
+        otherPlayerID = [playerID retain];
+    }
+    
+    //NSString* msg = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    
+    
+    NSString* msg = [[NSString alloc] initWithData:data
+                                               encoding:NSUTF8StringEncoding] ;
+    
+    javascriptMessage = msg;
+    NSLog(@"Received: %@", msg);
+    
+}
+
 
 
 

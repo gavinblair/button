@@ -16,6 +16,9 @@
 var buttonGame = function(){
 	buttonGame.prototype.state = '';
 	buttonGame.prototype.canStart = false;
+	buttonGame.prototype.randomNumber = Math.random()*1000;
+	buttonGame.prototype.theirNumber = null;
+	buttonGame.prototype.theyHaveOurNumber = false;
 
 	var maxscore = 1000*60*2, // 1000*60*number of minutes
 		myscore = maxscore,
@@ -39,13 +42,13 @@ var buttonGame = function(){
 				document.getElementById("gametemplates").innerHTML=data;
 				ich.grabTemplates();
 				buttonGame.prototype.canStart = true;
-				buttonGame.prototype.state = 'Starting Game...';
+				setState('Waiting for Opponent...');
 			}
 		});
 	}, false);
 
 	buttonGame.prototype.start = function(){
-		setState("Starting Game...");
+		setState("Ready for Game to Start");
 
 		//create the avatars
 		var myCanvas = document.createElement('canvas');
@@ -56,41 +59,77 @@ var buttonGame = function(){
 		theirAvatarCTX = theirCanvas.getContext('2d');
 
 		myAvatarCTX.strokeStyle = 'rgba(0,0,0,0)';
-		myAvatarCTX.arc(38,38,28,0,Math.PI*2,true);
+		myAvatarCTX.arc(20,20,20,0,Math.PI*2,true);
 		myAvatarCTX.clip();
 
 		$('.avatar img')[0].addEventListener('load', function(e){
-			myAvatarCTX.drawImage(this,0,0,210,210,0,0,56,56);
+			myAvatarCTX.drawImage($('.avatar img')[0],0,0,240,240,0,0,40,40);
+			myAvatarCTX.stroke();
+			myAvatarCTX.strokeStyle = 'rgba(0,0,0,1)';
+			myAvatarCTX.lineWidth = 13;
+			myAvatarCTX.arc(40,40,50,0,Math.PI*2,true);
 			myAvatarCTX.stroke();
 		}, true);
 
 		$('.avatar img')[0].parentNode.insertBefore(myCanvas, $('.avatar img')[0].nextSibling);
 		$('.avatar img').hide();
 
-		buttonGame.prototype.buttonClick();
+		if(buttonGame.prototype.randomNumber > buttonGame.prototype.theirNumber) {
+			//our turn!
+			setState("Your Turn");
+		} else {
+			//their turn!
+			setState("Waiting...");
+		}
 
 		buttonGame.prototype.timer = setInterval(tick,1); //tick every millisecond
 
-
-		/* remove this, it's just the AI *//*(function loop() {
-		    var rand = Math.round(Math.random() * (5000 - 500)) + 500;
-		    setTimeout(function() {
-		    		if(!$('#thebutton').hasClass('off')){
-		            	buttonGame.prototype.punch($('.avatar')[0]);
-		            }
-		            loop();  
-		    }, rand);
-		}());*/
-		/* remove this, it's more AI *//*(function loop() {
-		    var rand = Math.round(Math.random() * (10000 - 500)) + 500;
-		    setTimeout(function() {
-		            if($('#thebutton').hasClass('off')){
-		            	buttonGame.prototype.buttonClick();
-		            }
-		            loop();  
-		    }, rand);
-		}());*/
 	};
+
+	buttonGame.prototype.receivedMessage = function(data, gameCenter){
+		buttonGame.prototype.gameCenter = gameCenter;
+		var reply = "";
+		switch(buttonGame.prototype.state){
+			case 'Waiting for Opponent...':
+				//is this a random number?
+
+				if(data.substring(0, 6) == 'random' && buttonGame.prototype.theirNumber == null){
+					var parts = data.split(":");
+    				buttonGame.prototype.theirNumber = parseInt(parts[1]);
+ 					reply = "got ur number";
+				}
+
+				if(data == 'got ur number'){
+					buttonGame.prototype.theyHaveOurNumber = true;
+					
+					//we have their number, they have ours.
+					//it's time to take this relationship to the next step!
+					setState('Found Opponent');
+					start();
+				}
+				if(buttonGame.prototype.theirNumber != null){
+					buttonGame.prototype.gameCenter.sendMessage('got ur number');
+				}
+				if(!(buttonGame.prototype.theyHaveOurNumber)){
+					//send a ping to our opponent
+					buttonGame.prototype.gameCenter.sendMessage('random:'+buttonGame.prototype.randomNumber);
+				}
+			break;
+			case 'Your Turn':
+				//our turn
+				//were we punched?
+				//buttonGame.prototype.punch($('.avatar')[0]);
+			break;
+			case 'Waiting...':
+				//are they done yet?
+				if(data == 'your turn'){
+					setState('Your Turn');
+				}
+				//were we punched?
+			break;
+		}
+		buttonGame.prototype.gameCenter.sendMessage(reply);
+	}
 
 	function tick(){
 		if(buttonGame.prototype.state == "Your Turn"){
@@ -109,6 +148,14 @@ var buttonGame = function(){
 
 	function setState(state){
 		document.getElementById('state').innerHTML = buttonGame.prototype.state = state;
+		document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();
+		if(state == 'Your Turn'){
+			$("#thebutton").removeClass('off');
+			$('#thebutton').attr('ontouchstart', 'app.game.buttonClick()');
+		} else if (state == 'Waiting...'){
+			$("#thebutton").addClass('off');
+			$('#thebutton').attr('ontouchstart', '');
+		}
 	}
 
 	buttonGame.prototype.punch = function(el) {
@@ -119,28 +166,7 @@ var buttonGame = function(){
 	}
 
 	buttonGame.prototype.buttonClick = function(){
-		el = document.getElementById('thebutton');
-		el.className = (new RegExp( "off" )).test( el.className ) ? el.className.replace( (new RegExp( "off" )), "" ) : el.className + " " + "off"; el.className = el.className.trim();
-
-		//stop everything
-		
-
-		if(buttonGame.prototype.state == "Your Turn"){
-			i = 1;
-			setState("Waiting...");
-			//remove the click handler
-			$('#thebutton').attr('ontouchstart', '');
-		} else {
-			i = 0;
-			setState("Your Turn");
-			//add the handler back in
-			$('#thebutton').attr('ontouchstart', 'app.game.buttonClick()');
-		}
-
-		document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();
-
-		
-
+		buttonGame.prototype.gameCenter.sendMessage('your turn');
 	};
 
 	function getRandomSarcasticRemark(){

@@ -29,8 +29,11 @@ var gameManager = function(game){
 		if(game.canStart) {
 			if(gameCenter){
 				gameCenter.getMatch();
-				gameCenter.startListening();
+				gameCenter.startListening(function(data){
+					game.receivedMessage(data, gameCenter);
+				});
 			} else {
+				//browser mode
 				document.getElementById('container').innerHTML = ich.game();
 				game.start();
 			}

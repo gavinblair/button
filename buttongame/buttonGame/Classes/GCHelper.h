@@ -11,7 +11,7 @@
 #import <GameKit/GameKit.h>
 
 @protocol GCHelperDelegate
-- (void)matchStarted;
+- (void)matchHasStarted;
 - (void)matchEnded;
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data
    fromPlayer:(NSString *)playerID;
@@ -19,7 +19,6 @@
 
 @interface GCHelper : CDVPlugin <GKMatchmakerViewControllerDelegate, GKMatchDelegate> {
     BOOL gameCenterAvailable;
-    NSMutableString * message;
     BOOL userAuthenticated;
     
     UIViewController *presentingViewController;
@@ -27,24 +26,32 @@
     BOOL matchStarted;
     id <GCHelperDelegate> delegate;
     
+    NSMutableDictionary *playersDict;
+    
+    NSString *otherPlayerID;
+    
+    BOOL isPlayer1;
     
 }
-- (void) setMessage:(NSString *) message;
-- (NSString *) grabMessage;
 
 @property (retain) UIViewController *presentingViewController;
 @property (retain) GKMatch *match;
 @property (assign) id <GCHelperDelegate> delegate;
+@property (assign, readonly) BOOL userAuthenticated;
 
 - (void)findMatchWithMinPlayers:(int)minPlayers maxPlayers:(int)maxPlayers
                  viewController:(UIViewController *)viewController
                        delegate:(id<GCHelperDelegate>)theDelegate;
 
 @property (assign, readonly) BOOL gameCenterAvailable;
+@property (assign, readonly) BOOL matchStarted;
+
+@property (retain) NSMutableDictionary *playersDict;
 
 + (GCHelper *)sharedInstance;
 - (void)authenticateLocalUser;
 
 - (void)getMatch:(CDVInvokedUrlCommand*)command;
+- (void)getMessage:(CDVInvokedUrlCommand*)command;
 
 @end
