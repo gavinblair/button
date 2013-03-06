@@ -22,3 +22,15 @@ ability to reset either counter to a specific value (in case of sync issues)
 
 other.gav@gmail.com
 gavinblair+humanbeings@gmail.com
+
+
+$('canvas')[0].width = $('canvas')[0].width;
+
+
+		myAvatarCTX.strokeStyle = 'rgba(0,0,0,0)';
+		myAvatarCTX.arc(38,38,28,0,Math.PI*2,true);
+		myAvatarCTX.clip();
+
+
+			myAvatarCTX.drawImage($('.avatar img')[0],0,0,210,210,0,0,56,56);
+			myAvatarCTX.stroke();
