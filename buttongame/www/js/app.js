@@ -27,11 +27,13 @@ var gameManager = function(game){
 
 	gameManager.prototype.newGame = function(){
 		if(game.canStart) {
-			gameCenter.getMatch();
-			gameCenter.startListening();
-			
-			//document.getElementById('container').innerHTML = ich.game();
-			//game.start();
+			if(gameCenter){
+				gameCenter.getMatch();
+				gameCenter.startListening();
+			} else {
+				document.getElementById('container').innerHTML = ich.game();
+				game.start();
+			}
 		}
 	}
 	gameManager.prototype.showSettings = function(){
