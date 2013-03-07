@@ -16,13 +16,13 @@ var GameCenter = function() {
         setInterval(function(){
             cordova.exec(function(data){
                 if(data != null){
-                    GameCenter.prototype.lastMessage = data;
                     if(data == "Match started"){
                         matchStarted = true;
                     }
                     if(matchStarted){
                         GameCenter.prototype.listenerCallback(data);
                     }
+                    GameCenter.prototype.lastMessage = data;
                 }
             }, null, "GCHelper", "getMessage", []);
         },1);

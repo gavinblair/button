@@ -2,14 +2,14 @@
 	<div class='page' id='game'>
 		{{>nav}}
 		<div class='players clearfix'>
-			<div class='avatar'>
-				<img src='https://twimg0-a.akamaihd.net/profile_images/2784807168/5e2a5a84c49314804b94ad007cf09317.jpeg' />
+			<div id='myAvatar' class='avatar'>
+				<svg class='circlephoto' style="overflow: hidden; position: absolute; top: 4px; left: 4px;" height="76" version="1.1" width="76" xmlns="http://www.w3.org/2000/svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><pattern style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" id="D3D36A41-5310-4D59-9B99-4E7B853498CC" x="0" y="0" height="1" width="1" patternContentUnits="objectBoundingBox"><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="1" height="1" preserveAspectRatio="none" xlink:href="https://twimg0-a.akamaihd.net/profile_images/2784807168/5e2a5a84c49314804b94ad007cf09317.jpeg"></image></pattern></defs><circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="34" cy="34" r="30" fill="url(#D3D36A41-5310-4D59-9B99-4E7B853498CC)" stroke="none"></circle></svg>
 			</div>
-			<div class='avatar' ontouchstart='app.game.punch(this)'>
-				<img src='https://twimg0-a.akamaihd.net/profile_images/552066128/Photo_16.jpg' />
+			<div id='theirAvatar' class='avatar' ontouchstart='app.game.punch(this)'>
+				<svg class='circlephoto' style="overflow: hidden; position: absolute; top: 4px; left: 4px;" height="76" version="1.1" width="76" xmlns="http://www.w3.org/2000/svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><pattern style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" id="D3D36A41-5310-4D59-9B99-4E7B853498CC" x="0" y="0" height="1" width="1" patternContentUnits="objectBoundingBox"><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="1" height="1" preserveAspectRatio="none" xlink:href="https://twimg0-a.akamaihd.net/profile_images/552066128/Photo_16.jpg"></image></pattern></defs><circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="34" cy="34" r="30" fill="url(#D3D36A41-5310-4D59-9B99-4E7B853498CC)" stroke="none"></circle></svg>
 			</div>
 		</div>
-		<strong id='state'>Waiting for opponent...</strong>
+		<strong id='state'>Waiting for Opponent...</strong>
 		<br />
 		<em id='sarcastic'>What will you do?</em>
 		<div class='button off' id='thebutton'></div>

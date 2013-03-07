@@ -23,18 +23,22 @@ var gameManager = function(game){
 
 	}, false );
 
-
-
 	gameManager.prototype.newGame = function(){
 		if(game.canStart) {
+			//show the game board, wait for the Game Center popup to come up first
 			if(gameCenter){
+				setTimeout(function(){
+					game.domGameBoard = ich.game();
+					document.getElementById('container').innerHTML = game.domGameBoard;
+				}, 1000);
 				gameCenter.getMatch();
 				gameCenter.startListening(function(data){
 					game.receivedMessage(data, gameCenter);
 				});
 			} else {
 				//browser mode
-				document.getElementById('container').innerHTML = ich.game();
+				game.domGameBoard = ich.game();
+				document.getElementById('container').innerHTML = game.domGameBoard;
 				game.start();
 			}
 		}
