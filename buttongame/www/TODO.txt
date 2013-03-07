@@ -1,21 +1,19 @@
-
-spinners (raphaeljs), score
-detect game over
+- need the mac -
 multiple games
-player images
 push notifications
+
+- off mac -
+default player image
 app.showPage("howtoplay")
 gamemanager settings
 game settings
 make .thumb:active work properly (turn off
+images (icon, splash)
+disable scrolling when not needed
 sound effects
 app.toggleSounds()
 debug (from settings)
-disable scrolling when not needed
 playtest playtest playtest
 
-
-
-other.gav@gmail.com
-gavinblair+humanbeings@gmail.com
-
+- later -
+player images

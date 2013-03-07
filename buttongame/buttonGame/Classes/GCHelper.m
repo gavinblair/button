@@ -101,6 +101,7 @@ static GCHelper *sharedHelper = nil;
             for (GKPlayer *player in players) {
                 NSLog(@"Found player: %@", player.alias);
                 [playersDict setObject:player forKey:player.playerID];
+                javascriptMessage = @"";
             }
             
             // Notify delegate match can begin

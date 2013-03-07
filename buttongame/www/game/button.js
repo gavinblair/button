@@ -47,6 +47,8 @@ var buttonGame = function(){
 	}, false);
 
 	buttonGame.prototype.start = function(){
+
+		//this function runs a gajillion times the first time. not sure why.
 		setState("Ready for Game to Start");
 
 		//create the avatars
@@ -66,9 +68,9 @@ var buttonGame = function(){
 			}
 		}
 
-		
-
-		buttonGame.prototype.timer = setInterval(tick,1); //tick every ten milliseconds
+		if(buttonGame.prototype.bigtimer) {
+			clearInterval(buttonGame.prototype.bigtimer);
+		}
 		buttonGame.prototype.bigtimer = setInterval(bigtick,1000); //bigtick every second
 
 	};
@@ -95,9 +97,9 @@ var buttonGame = function(){
             }
             return {path: path, stroke: color};
         };
-        var sec = r.path().attr(param).attr({arc: [maxscore/1000, maxscore/1000, R]});
-        sec.animate({arc: [maxscore/1000, maxscore/1000, R]}, 900, ">");
-        //updateVal(maxscore/1000, maxscore/1000, 33, sec);
+        var sec = r.path().attr(param).attr({arc: [maxscore, maxscore, R]});
+        sec.animate({arc: [maxscore, maxscore, R]}, 900, ">");
+        //updateVal(maxscore, maxscore, 33, sec);
 
         return {r: r, sec: sec}
 	}
@@ -129,7 +131,12 @@ var buttonGame = function(){
 			case 'Your Turn':
 				//our turn
 				//were we punched?
-				//buttonGame.prototype.punch($('.avatar')[0]);
+				if(data.message == 'punch' && data.timeStamp != JSON.parse(buttonGame.prototype.gameCenter.lastMessage).timeStamp){
+					$('#myAvatar').removeClass('punch');
+					setTimeout(function(){
+						$('#myAvatar').addClass('punch');
+					}, 0);
+				}
 			break;
 			case 'Waiting...':
 				//are they done yet?
@@ -137,6 +144,12 @@ var buttonGame = function(){
 					setState('Your Turn');
 				}
 				//were we punched?
+				if(data.message == 'punch' && data.timeStamp != JSON.parse(buttonGame.prototype.gameCenter.lastMessage).timeStamp){
+					$('#myAvatar').removeClass('punch');
+					setTimeout(function(){
+						$('#myAvatar').addClass('punch');
+					}, 0);
+				}
 			break;
 		}
 
@@ -146,35 +159,21 @@ var buttonGame = function(){
 		}
 	}
 
-	function tick(){
-		if(buttonGame.prototype.state == "Your Turn" || !buttonGame.gameCenter){
-			//update my score
-			if(buttonGame.prototype.myScore > 0) {
-				buttonGame.prototype.myScore -= 1;
-				$("#sarcastic").text(buttonGame.prototype.myScore);
-			} else {
-				//we lose
-
-			}
-		} else if(buttonGame.prototype.state == "Waiting..."){
-			if(buttonGame.prototype.theirScore > 0) {
-				buttonGame.prototype.theirScore -= 1;
-				$("#sarcastic").text(buttonGame.prototype.theirScore);
-			} else {
-				//we win
-				
-			}
-		}
-	}
 	function bigtick(){
 		if(buttonGame.prototype.state == "Your Turn" || !buttonGame.prototype.gameCenter){
 			//update my score
 			if(buttonGame.prototype.myScore > 0) {
-				updateVal(buttonGame.prototype.myScore/1000, maxscore/1000, 33, myAvatar);
+				buttonGame.prototype.myScore = buttonGame.prototype.myScore - 1000;
+				updateVal(buttonGame.prototype.myScore, maxscore, 33, myAvatar);
+			} else {
+				alert("You Lose!");
 			}
 		} else if(buttonGame.prototype.state == "Waiting..."){
 			if(buttonGame.prototype.theirScore > 0) {
-				updateVal(buttonGame.prototype.theirScore/1000, maxscore/1000, 33, theirAvatar);
+				buttonGame.prototype.theirScore = buttonGame.prototype.theirScore - 1000;
+				updateVal(buttonGame.prototype.theirScore, maxscore, 33, theirAvatar);
+			} else {
+				alert("You Win!");
 			}
 		}
 	}
@@ -195,6 +194,7 @@ var buttonGame = function(){
 	}
 
 	buttonGame.prototype.punch = function(el) {
+		buttonGame.prototype.gameCenter.sendMessage(JSON.stringify({message:'punch', timeStamp: (Math.round(new Date().getTime()))}));
 		$(el).removeClass('punch');
 		setTimeout(function(){
 			$(el).addClass('punch');
