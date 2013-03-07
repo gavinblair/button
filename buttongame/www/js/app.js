@@ -1,7 +1,6 @@
-var gameManager = function(game){
+var gameManager = function(){
 
-	var games = [];
-	gameManager.prototype.game = game;
+	gameManager.prototype.games = [];
 	gameManager.prototype.gameCenter = null;
 	var gameCenter;
 
@@ -24,7 +23,9 @@ var gameManager = function(game){
 	}, false );
 
 	gameManager.prototype.newGame = function(){
-		if(game.canStart) {
+		gameManager.prototype.games.push(new buttonGame());
+		var game = gameManager.prototype.games[gameManager.prototype.games.length-1];
+		game.init(function(){
 			//show the game board, wait for the Game Center popup to come up first
 			if(gameCenter){
 				setTimeout(function(){
@@ -41,15 +42,19 @@ var gameManager = function(game){
 				document.getElementById('container').innerHTML = game.domGameBoard;
 				game.start();
 			}
-		}
+			//add the game to the lobby
+
+		});
 	}
 	gameManager.prototype.showSettings = function(){
 		document.getElementById('container').innerHTML = ich.settings();
 	}
 	gameManager.prototype.backToLobby = function(){
-		document.getElementById('container').innerHTML = ich.lobby();
+		document.getElementById('container').innerHTML = ich.lobby({
+			games: gameManager.prototype.games
+		});
 	}
 
 };
 
-var app = new gameManager(new buttonGame());
+var app = new gameManager();

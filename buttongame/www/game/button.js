@@ -32,7 +32,7 @@ var buttonGame = function(){
 	}*/
 
 	//init
-	document.addEventListener( "DOMContentLoaded", function(){
+	buttonGame.prototype.init = function(callback){
 		$.ajax({
 			url: 'game/button.html',
 			type: 'get',
@@ -42,9 +42,10 @@ var buttonGame = function(){
 				ich.grabTemplates();
 				buttonGame.prototype.canStart = true;
 				setState('Waiting for Opponent...');
+				callback();
 			}
 		});
-	}, false);
+	};
 
 	buttonGame.prototype.start = function(){
 
@@ -180,9 +181,10 @@ var buttonGame = function(){
 
 	function setState(state){
 		if(buttonGame.prototype.state != state){
-			document.getElementById('state').innerHTML = buttonGame.prototype.state = state;
-			document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();
-			buttonGame.prototype.turnStartTime = new Date().getTime();
+			if($("#state").length) {
+				document.getElementById('state').innerHTML = buttonGame.prototype.state = state;
+				document.getElementById('sarcastic').innerHTML = getRandomSarcasticRemark();
+			}
 			if(state == 'Your Turn'){
 				$("#thebutton").removeClass('off');
 				$('#thebutton').attr('ontouchstart', 'app.game.buttonClick()');
