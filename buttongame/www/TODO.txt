@@ -17,3 +17,8 @@ playtest playtest playtest
 
 - later -
 player images
+
+
+
+javascript:var meta=document.createElement('meta');
+meta.name='apple-mobile-web-app-capable';meta.content='yes';document.getElementsByTagName('head').item(0).appendChild(meta);alert('Y ou may now add this web app to the home screen.');
