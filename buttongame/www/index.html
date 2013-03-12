@@ -10,7 +10,11 @@
 		<meta http-equiv="cleartype" content="on">
 		<!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- iPhone 5 (Retina) -->
+		<link href="img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		<!-- iPhone 5 -->
+		<link href="img/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 		<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
@@ -44,44 +48,48 @@
 
 		<script type="text/html" id="nav">
 			<nav>
-				<img src='img/back.png' onclick='app.backToLobby()'>
+				<img src='img/back.png' onclick='game.backToLobby()'>
 			</nav>
 		</script>
-		<script type="text/html" id="lobby">
+		<script type="text/html" id="welcome">
 			<div class='page' id='lobby'>
-				<ul>
-					{{#games}}
-						<li>
-							<img class='thumb' src='{{thumb}}' />
-							<em>{{state}}</em>
-							{{username}}
-							{{#avatars}}
-								<img class='avatar' src='{{avatar}}' />
-							{{/avatars}}
-						</li>
-					{{/games}}
-					<li onclick='app.newGame()'>
-						<img class='thumb' src='img/newgame.png?v=1' />
-						<strong>New Game</strong>
-					</li>
-					<li onclick='app.showSettings()'>
-						<img class='thumb' src='img/settings.png?v=1' />
-						<strong>Settings</strong>
-					</li>
-				</ul>
+				<h1>Welcome</h1>
+				<p>
+					This game uses Game Center to connect and play games with others.
+				</p>
+				<a id='signin' onclick='game.login()'>Sign In with Game Center</a>
 			</div>
 		</script>
 		<script type="text/html" id="settings">
 			<div class='page' id='settings'>
 				{{>nav}}
-				{{>gamesettings}}
 				<ul>
-					<li onclick='app.toggleSounds()'>Sounds (on)</li>
+					<li onclick='game.showPage("howtoplay")'>How to Play</li>
+					<li onclick='game.showPage("about")'>About</li>
+				</ul>
+				<ul>
+					<li onclick='game.toggleSounds()'>Sounds (on)</li>
 				</ul>
 			</div>
 		</script>
+		<script type="text/html" id="game">
+			<div class='page' id='game'>
+				{{>nav}}
+				<div class='players clearfix'>
+					<div id='myAvatar' class='avatar'>
+						<svg class='circlephoto' style="overflow: hidden; position: absolute; top: 4px; left: 4px;" height="76" version="1.1" width="76" xmlns="http://www.w3.org/2000/svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><pattern style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" id="D3D36A41-5310-4D59-9B99-4E7B853498CC" x="0" y="0" height="1" width="1" patternContentUnits="objectBoundingBox"><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="1" height="1" preserveAspectRatio="none" xlink:href="img/me.png"></image></pattern></defs><circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="34" cy="34" r="30" fill="url(#D3D36A41-5310-4D59-9B99-4E7B853498CC)" stroke="none"></circle></svg>
+					</div>
+					<div id='theirAvatar' class='avatar' ontouchstart='game.punch(this)'>
+						<svg class='circlephoto' style="overflow: hidden; position: absolute; top: 4px; left: 4px;" height="76" version="1.1" width="76" xmlns="http://www.w3.org/2000/svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><pattern style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" id="D3D36A41-5310-4D59-9B99-4E7B853498CC" x="0" y="0" height="1" width="1" patternContentUnits="objectBoundingBox"><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="1" height="1" preserveAspectRatio="none" xlink:href="img/them.png"></image></pattern></defs><circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="34" cy="34" r="30" fill="url(#D3D36A41-5310-4D59-9B99-4E7B853498CC)" stroke="none"></circle></svg>
+					</div>
+				</div>
+				<strong id='state'>Waiting for Opponent...</strong>
+				<br />
+				<em id='sarcastic'>What will you do?</em>
+				<div class='button off' id='thebutton'></div>
+			</div>
+		</script>
 		<script src='game/raphael.js'></script>
-		<script src="game/button.js"></script>
 		<script src="js/GameCenterPlugin.js"></script>
 		<script src="js/app.js"></script>
 	</head>

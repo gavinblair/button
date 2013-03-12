@@ -137,14 +137,27 @@ body {
 }
 
 /* lobby */
-ul {
-    list-style: none;
-    padding: 1em;
-    margin: 0;
+#lobby {
+    text-align: center;
+    padding-top: 3em;
+    width: 75%;
+    margin: 0 auto;
 }
-#lobby li {
-    margin-bottom: 1em;
+#signin {
+    border: 3px solid #333;
+    padding: .4em .5em .25em .5em;
+    display: block;
+    width: 90%;
+    margin: 2em auto;
+    border-radius: 999px;
+    cursor: pointer;
 }
+h1 {
+    font-family: hb;
+}
+
+
+
 .thumb {
     height: 5em;
     width: 5em;
@@ -180,6 +193,129 @@ nav img:hover {
     opacity: .75;
 }
 
+
+/* game */
+#game {
+  text-align: center;
+}
+/* avatars in game */
+#game .players {
+    margin: 0 auto 1em auto;
+    width: 200px;
+}
+#game .avatar {
+   
+    width: 76px;
+    height: 76px;
+    position: relative;
+    margin: 0 .5em;
+    float: left;
+}
+#game .avatar.punch{
+  -webkit-animation-fill-mode: both;
+  -webkit-animation: wobble 5s infinite;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble {
+  0% { -webkit-transform: translateX(0%); }
+  1.5% { -webkit-transform: translateX(-25%) rotate(-5deg); }
+  3.0% { -webkit-transform: translateX(20%) rotate(3deg); }
+  4.5% { -webkit-transform: translateX(-15%) rotate(-3deg); }
+  6.0% { -webkit-transform: translateX(10%) rotate(2deg); }
+  7.5% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  10.0% { -webkit-transform: translateX(0%); }
+}
+
+  
+
+#game .avatar img {
+    border-radius: 999px;
+    height: 61px;
+    width: 61px;
+    position: absolute;
+    left: 50%;
+    margin-left: -31px;
+    margin-top: 7px;
+    top: 0;
+}
+
+
+
+
+/* button */
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot');
+  src: url('../fonts/fontello.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff') format('woff'),
+       url('../fonts/fontello.ttf') format('truetype'),
+       url('../fonts/fontello.svg#fontello') format('svg');
+  font-weight: normal; font-style: normal;
+}
+.button {
+  font-family: 'fontello';
+  font-style: normal;
+  font-size: 3em;
+  speak: none;
+  text-decoration: none;
+  color: #DD6C4F;
+  display: block;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: #a7a7a7;
+  margin: 45px auto;
+  width: 144px;
+  height: 144px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 10px 22px #aaa, inset 0px 8px 22px #fff;
+  border: solid 1px transparent;
+}
+
+.button:after { content: "\e071"; } 
+
+.button:focus { 
+  outline: none;
+}
+
+
+.button:before {
+  content: "";
+  display: block;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  bottom: -18px;
+  right: -18px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 48px #ddd;
+}
+
+.button:active {
+  box-shadow: inset 0px 32px 64px #ddd;
+}
+
+.button.off {
+  box-shadow: inset 0px 32px 64px #ddd;
+}
+.button:after {
+    color: #ff6162;
+}
+.button.off:after {
+    color: #999;
+}
 
 
 
@@ -312,3 +448,15 @@ textarea[contenteditable] {
    ========================================================================== */
 
 
+/* shorter iphones */
+@media only screen and (min-device-height: 481px) {
+    #lobby {
+        padding-top: 5em;
+    }
+    #game .players {
+        margin-bottom: 4em;
+    }
+    .button {
+        margin-top: 57px;
+    }
+}
