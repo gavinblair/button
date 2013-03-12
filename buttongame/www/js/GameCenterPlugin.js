@@ -45,7 +45,7 @@ var GameCenter = function() {
         var timeStamp = Math.round(new Date().getTime());
         cordova.exec(function(data){
             //successfully sent
-        }, null, "GCTurnBasedMatchHelper", "sendMessage", [msg: msg, timeStamp: timeStamp]);
+        }, null, "GCTurnBasedMatchHelper", "sendMessage", {msg: msg, timeStamp: timeStamp});
     };
 };
 

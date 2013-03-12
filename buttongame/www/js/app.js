@@ -1,49 +1,47 @@
 var buttonGame = function(){
 
-	buttonGame.prototype.gamecenter = false;
+	buttonGame.prototype.gamecenter = new GameCenter();
 
 	
 	cordova.addConstructor(function() {
 		//cordova is ready, dom might not be
+		setTimeout(function(){
+			var gamecenter = buttonGame.prototype.gamecenter;
+			
+			//if we are already logged into the game center, show the game center
+			gamecenter.showLobby();
+			
+			gamecenter.startListening(function(data){
+				//we can show the game board and use data to modify it
+				if(data.game == true){
+					document.getElementById('container').innerHTML = ich.game();
+
+					myAvatar = counter('myAvatar');
+					theirAvatar = counter('theirAvatar');
+				
+
+
+
+
+
+		
+				}
+			});
+		},1000);
 	});
 	
 	//dom ready. cordova probably is?
 	document.addEventListener( "DOMContentLoaded", function(){
 	
 		
-		buttonGame.prototype.gamecenter = new GameCenter();
-		
-
 		var gamecenter = buttonGame.prototype.gamecenter;
+		
 
 		//fastclick
 		new FastClick(document.getElementById('container'));
 
 		//show the sign-in screen
 		document.getElementById('container').innerHTML = ich.welcome();
-
-		//if we are already logged into the game center, show the game center
-		if(gamecenter){
-			gamecenter.showLobby();
-
-			buttonGame.prototype.startListening(function(data){
-				//we can show the game board and use data to modify it
-				/**/console.log(data);
-
-				document.getElementById('container').innerHTML = ich.game();
-
-				myAvatar = counter('myAvatar');
-				theirAvatar = counter('theirAvatar');
-
-
-
-
-
-
-
-				
-			});
-		}
 
 	}, false );
 

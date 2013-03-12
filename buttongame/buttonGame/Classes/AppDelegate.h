@@ -28,7 +28,7 @@
 #import <UIKit/UIKit.h>
 
 #import <Cordova/CDVViewController.h>
-#import "GCHelper.h"
+#import "GCTurnBasedMatchHelper.h"
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>{}
 

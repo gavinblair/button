@@ -3,6 +3,8 @@
 #import "MainViewController.h"
 #import "AppDelegate.h"
 
+NSString *javascriptMessage = @"";
+
 @implementation GCTurnBasedMatchHelper
 
 @synthesize gameCenterAvailable;
@@ -90,7 +92,7 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
 - (void)findMatchWithMinPlayers:(int)minPlayers 
   maxPlayers:(int)maxPlayers 
   viewController:(UIViewController *)viewController
-                       delegate:(id<GCHelperDelegate>)theDelegate {
+                       delegate:(id<GCTurnBasedMatchHelperDelegate>)theDelegate {
     if (!gameCenterAvailable) return;               
  
     presentingViewController = viewController;
@@ -289,7 +291,7 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
 
 
 
-- (void)getLobby:(CDVInvokedUrlCommand*)command{
+- (void)getMatch:(CDVInvokedUrlCommand*)command{
     CDVPluginResult* pluginResult = nil;
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
 	
@@ -299,6 +301,36 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
 	[[GCTurnBasedMatchHelper sharedInstance]
       findMatchWithMinPlayers:2 maxPlayers:2 viewController:delegate.viewController delegate:self];
 			
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)login:(CDVInvokedUrlCommand*)command{
+    CDVPluginResult* pluginResult = nil;
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
+	
+	if([GKLocalPlayer localPlayer].authenticated == YES){
+		AppDelegate * delegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
+    
+	
+		[[GCTurnBasedMatchHelper sharedInstance]
+      	findMatchWithMinPlayers:2 maxPlayers:2 viewController:delegate.viewController delegate:self];
+			
+    
+	} else {
+    	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"gamecenter:/me"]];
+	}
+		
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
+- (void)getMessage:(CDVInvokedUrlCommand*)command{
+    CDVPluginResult* pluginResult = nil;
+	
+	NSString *statusString = javascriptMessage;
+	
+	
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:statusString];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 

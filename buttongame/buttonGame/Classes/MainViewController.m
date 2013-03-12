@@ -108,7 +108,18 @@
 - (void)webViewDidFinishLoad:(UIWebView*)theWebView
 {
     // Black base color for background matches the native apps
-    theWebView.backgroundColor = [UIColor blackColor];
+    theWebView.backgroundColor = [UIColor whiteColor];
+    for (UIView* subView in [theWebView subviews])
+    {
+        if ([subView isKindOfClass:[UIScrollView class]]) {
+            for (UIView* shadowView in [subView subviews])
+            {
+                if ([shadowView isKindOfClass:[UIImageView class]]) {
+                    [shadowView setHidden:YES];
+                }
+            }
+        }
+    }
 
     return [super webViewDidFinishLoad:theWebView];
 }
