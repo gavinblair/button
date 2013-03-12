@@ -29,7 +29,7 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
-#import "GCHelper.h"
+#import "GCTurnBasedMatchHelper.h"
 
 @implementation AppDelegate
 
@@ -78,7 +78,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    [[GCHelper sharedInstance] authenticateLocalUser];
+    [[GCTurnBasedMatchHelper sharedInstance] authenticateLocalUser];
 
     return YES;
 }

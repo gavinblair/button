@@ -43,6 +43,7 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		B4A13F3716EEB077003E2CC4 /* GCTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A13F3616EEB077003E2CC4 /* GCTurnBasedMatchHelper.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,8 @@
 		32CA4F630368D1EE00C91783 /* buttonGame-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "buttonGame-Prefix.pch"; sourceTree = "<group>"; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* buttonGame-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "buttonGame-Info.plist"; path = "../buttonGame-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B4A13F3516EEB077003E2CC4 /* GCTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCTurnBasedMatchHelper.h; path = buttonGame/Classes/GCTurnBasedMatchHelper.h; sourceTree = "<group>"; };
+		B4A13F3616EEB077003E2CC4 /* GCTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCTurnBasedMatchHelper.m; path = buttonGame/Classes/GCTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = buttonGame/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +183,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				B4A13F3516EEB077003E2CC4 /* GCTurnBasedMatchHelper.h */,
+				B4A13F3616EEB077003E2CC4 /* GCTurnBasedMatchHelper.m */,
 				236B4A8316E687780050F551 /* GCHelper.h */,
 				236B4A8416E687780050F551 /* GCHelper.m */,
 				236B4A8016E672CA0050F551 /* GameKit.framework */,
@@ -422,6 +427,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				236B4A8516E687780050F551 /* GCHelper.m in Sources */,
+				B4A13F3716EEB077003E2CC4 /* GCTurnBasedMatchHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
