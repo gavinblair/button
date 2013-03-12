@@ -2,13 +2,17 @@ var buttonGame = function(){
 
 	buttonGame.prototype.gamecenter = false;
 
+	
 	cordova.addConstructor(function() {
 		//cordova is ready, dom might not be
-		buttonGame.prototype.gamecenter = new GameCenter();
 	});
-
+	
 	//dom ready. cordova probably is?
 	document.addEventListener( "DOMContentLoaded", function(){
+	
+		
+		buttonGame.prototype.gamecenter = new GameCenter();
+		
 
 		var gamecenter = buttonGame.prototype.gamecenter;
 
