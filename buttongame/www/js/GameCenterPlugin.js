@@ -1,9 +1,15 @@
 
 var GameCenter = function() {
-
+	/**/console.log('initialized gamecenter');
     this.login = function() {
         cordova.exec(null, null, "GCTurnBasedMatchHelper", "login", []);
     };
+	
+	this.getPhotos= function(){
+		cordova.exec(function(data){
+			console.log(data);
+		}, null, "GCTurnBasedMatchHelper", "getPhotos", []);
+	};
     
     this.showLobby = function() {
         cordova.exec(function(data){
@@ -26,11 +32,13 @@ var GameCenter = function() {
         setInterval(function(){
             cordova.exec(function(data){
                 // var1=value&var2=value2&etc=era
+				var newdata = {};
                 data = data.split('&');
                 for(var i in data){
                     var parts = data[i].split('=');
-                    data[parts[0]] = parts[1];
+                    newdata[parts[0]] = parts[1];
                 }
+				data = newdata;
                 if(data != null){
                     if(data != GameCenter.prototype.lastMessage){
                         GameCenter.prototype.listenerCallback(data);

@@ -22,8 +22,9 @@ data.punch (this is a punch, not a game)
 -to do-
 
 player images
+weird freakout once starting counting animation
 push notifications
-
+sendmessage(punch)
 make .thumb:active work properly (turn off
 app.showPage("howtoplay")
 gamemanager settings

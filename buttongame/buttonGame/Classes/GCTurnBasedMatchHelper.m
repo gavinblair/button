@@ -123,15 +123,69 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
       [match.participants objectAtIndex:0];
     if (firstParticipant.lastTurnDate == NULL) {
         // It's a new game!
-        [delegate enterNewGame:match];
+        NSLog(@"Entering new game...");
+		
+		//set javascriptMessage to be a new game
+		javascriptMessage = @"game=new&turn=mine";		
+		
     } else {
         if ([match.currentParticipant.playerID 
           isEqualToString:[GKLocalPlayer localPlayer].playerID]) {
             // It's your turn!
-            [delegate takeTurn:match];
+			
+			NSLog(@"Taking turn for existing game...");
+    		int playerNum = [match.participants 
+      			indexOfObject:match.currentParticipant] + 1;
+    		NSString *statusString = [NSString stringWithFormat:
+     			 @"Player %d's Turn (that's you)", playerNum];
+			
+			NSLog(@"statusString: %@", statusString);
+			
+			javascriptMessage = @"game=true&turn=mine";
+
+    		if ([match.matchData bytes]) {
+        		NSString *msg = [NSString stringWithUTF8String:
+          		[match.matchData bytes]];
+
+			
+				NSLog(@"msg: %@", msg);
+			
+			
+			}
+			
+			
+			
+			
+			
+			
         } else {
+			/* layoutmatch */
             // It's not your turn, just display the game state.
-            [delegate layoutMatch:match];
+            NSLog(@"Viewing match where it's not our turn...");
+			NSString *statusString;
+		 
+			if (match.status == GKTurnBasedMatchStatusEnded) {
+				statusString = @"Match Ended";
+			} else {
+				int playerNum = [match.participants 
+				  indexOfObject:match.currentParticipant] + 1;
+				statusString = [NSString stringWithFormat:
+				  @"Player %d's Turn", playerNum];
+				  
+				  NSLog(@"statusString: %@", statusString);
+			}
+			
+			
+			NSString *msg = [NSString stringWithUTF8String:
+			  [match.matchData bytes]];
+			
+			NSLog(@"msg: %@", msg);
+			
+			
+			
+			
+			
+			
         }        
     }
 }
@@ -174,65 +228,6 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
       matchData:match.matchData completionHandler:nil];
 }
 
-#pragma mark - GCTurnBasedMatchHelperDelegate
- 
--(void)enterNewGame:(GKTurnBasedMatch *)match {
-    NSLog(@"Entering new game...");
-	
-	
-	
-	
-	
-	
-}
- 
--(void)takeTurn:(GKTurnBasedMatch *)match {
-    NSLog(@"Taking turn for existing game...");
-    int playerNum = [match.participants 
-      indexOfObject:match.currentParticipant] + 1;
-    NSString *statusString = [NSString stringWithFormat:
-      @"Player %d's Turn (that's you)", playerNum];
-
-
-    if ([match.matchData bytes]) {
-        NSString *msg = [NSString stringWithUTF8String:
-          [match.matchData bytes]];
-
-
-
-
-
-
-
-
-
-    }
-}
-
--(void)layoutMatch:(GKTurnBasedMatch *)match {
-    NSLog(@"Viewing match where it's not our turn...");
-    NSString *statusString;
- 
-    if (match.status == GKTurnBasedMatchStatusEnded) {
-        statusString = @"Match Ended";
-    } else {
-        int playerNum = [match.participants 
-          indexOfObject:match.currentParticipant] + 1;
-        statusString = [NSString stringWithFormat:
-          @"Player %d's Turn", playerNum];
-    }
-    
-    
-    NSString *msg = [NSString stringWithUTF8String:
-      [match.matchData bytes]];
-
-
-
-
-
-
-
-}
 
 #pragma mark GKTurnBasedEventHandlerDelegate
  
@@ -289,7 +284,24 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
     [av release];
 }
 
-
+- (void)getPhotos:(CDVInvokedUrlCommand*)command{
+	CDVPluginResult* pluginResult = nil;
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
+	
+	javascriptMessage = @"photos=true";
+	NSLog(@"%d",currentMatch.participants.count);
+	for (int i = 0; i < [currentMatch.participants count]; i++) {
+        [currentMatch.participants[i] loadPhotoForSize: GKPhotoSizeNormal withCompletionHandler:^(UIImage *photo, NSError *error) {
+            //photo
+			NSData *imageData = UIImagePNGRepresentation(photo.images[0]);
+			javascriptMessage = [NSString stringWithFormat:@"%@&image%d=%@",javascriptMessage,i,imageData];
+			NSLog(@"we do get here");
+		}];
+    }
+	
+	
+	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
 
 - (void)getMatch:(CDVInvokedUrlCommand*)command{
     CDVPluginResult* pluginResult = nil;
@@ -327,11 +339,18 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
 - (void)getMessage:(CDVInvokedUrlCommand*)command{
     CDVPluginResult* pluginResult = nil;
 	
-	NSString *statusString = javascriptMessage;
+	if(javascriptMessage.length > 0){
 	
+		NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
 	
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:statusString];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+		NSString *appendage = [NSString stringWithFormat:@"%.15f", timeStamp];
+	
+		NSString *statusString = [NSString stringWithFormat:@"%@&timeStamp=%@", javascriptMessage, appendage];
+		javascriptMessage = @"";
+	
+		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:statusString];
+    		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	}
 }
 
 - (void)sendTurn:(CDVInvokedUrlCommand*)command{

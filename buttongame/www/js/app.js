@@ -4,6 +4,7 @@ var buttonGame = function(){
 	buttonGame.prototype.settings = {
 		maxScore: 1000*60*2 //2 minutes
 	};
+	buttonGame.prototype.gameData = {};
 
 
 	cordova.addConstructor(function() {
@@ -15,21 +16,35 @@ var buttonGame = function(){
 			gamecenter.showLobby();
 
 			gamecenter.startListening(function(data){
-				if(data.game){
+				if(data.photos){
+					console.log(data);
+				} else if(data.game){
+					buttonGame.prototype.gameData = data;
 					//we can show the game board and use data to modify it
 					document.getElementById('container').innerHTML = ich.game();
-
-					myAvatar = counter('myAvatar');
-					theirAvatar = counter('theirAvatar');
-
-					updateVal(data.myScore, myAvatar);
-					updateVal(data.theirScore, theirAvatar);
-
+					
+					var myAvatar = buttonGame.prototype.counter('myAvatar');
+					var theirAvatar = buttonGame.prototype.counter('theirAvatar');
+					
+					if(data.game == 'new'){
+						data.myScore = buttonGame.prototype.settings.maxScore;
+						data.theirScore = buttonGame.prototype.settings.maxScore;
+					}
+					
+					buttonGame.prototype.updateVal(data.myScore, myAvatar);
+					buttonGame.prototype.updateVal(data.theirScore, theirAvatar);
+					
 					data.myTempScore = data.myScore;
 					data.theirTempScore = data.theirScore;
+					
+					
+					if(data.turn == 'mine'){
+						$('#thebutton').removeClass('off');
+					}
 
 					buttonGame.prototype.timer = setInterval(function(){
-
+						var data = buttonGame.prototype.gameData;
+						
 						//depending on whose turn it is, update their avatar
 						//we're updating their score, but this is just for show. 
 						//we'll use actual time differences
@@ -38,14 +53,22 @@ var buttonGame = function(){
 						var updateScore;
 						if(data.turn == 'mine') {
 							updateAvatar = myAvatar;
+							if(data.myTempScore > 1000) {
+								data.myTempScore-=1000;
+							} else {
+								data.myTempScore = 0;
+							}
 							updateScore = data.myTempScore;
-							data.myTempScore--;
 						} else {
 							updateAvatar = theirAvatar;
-							data.theirTempScore--;
+							if(data.theirTempScore > 1000){
+								data.theirTempScore-=1000;
+							} else {
+								data.theirTempScore = 0;
+							}
 							updateScore = data.theirTempScore;
 						}
-						updateVal(updateScore, updateAvatar);
+						buttonGame.prototype.updateVal(updateScore, updateAvatar);
 
 					}, 1000);
 
@@ -84,12 +107,14 @@ var buttonGame = function(){
 		document.getElementById('container').innerHTML = ich.welcome();
 	};
 
-	function counter(id){
+	buttonGame.prototype.counter = function (id){
+		
 		var r = Raphael(id, 76, 76);
-
+		
         var R = 33;
         var param = {stroke: "#000", "stroke-width": 10};
         r.customAttributes.arc = function (value, total, R) {
+			
             var alpha = 360 / total * value,
                 a = (90 - alpha) * Math.PI / 180,
                 x = 38 + R * Math.cos(a),
@@ -101,15 +126,17 @@ var buttonGame = function(){
             } else {
                 path = [["M", 38, 38 - R], ["A", R, R, 0, +(alpha > 180), 1, x, y]];
             }
+			
             return {path: path, stroke: color};
         };
-        var sec = r.path().attr(param).attr({arc: [maxscore, maxscore, R]});
-        sec.animate({arc: [maxscore, maxscore, R]}, 900, ">");
-
+		var total = buttonGame.prototype.settings.maxScore;
+        var sec = r.path().attr(param).attr({arc: [total-1, total, R]});
+		
+  	    
         return {r: r, sec: sec}
 	}
 
-	function updateVal(value, hand) {
+	buttonGame.prototype.updateVal = function(value, hand) {
 			var total = buttonGame.prototype.settings.maxScore;
       if (!value || value == total) {
           value = total;
@@ -123,7 +150,7 @@ var buttonGame = function(){
 
   this.sendTurn = function(){
   	var gamecenter = buttonGame.prototype.gamecenter;
-  	/**/
+  	/**/alert('send turn');
   };
 
   buttonGame.prototype.punch = function(el) {
