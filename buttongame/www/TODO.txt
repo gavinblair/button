@@ -1,33 +1,49 @@
-push notifications
-default player image
+data: "this=that&this=that&this=that"
 
+data.game (this is a game board)
+
+data.myScore (person we're sending to)
+data.theirScore
+
+data.turn ('mine' or 'theirs')
+
+data.punch (this is a punch, not a game)
+
+
+player images
+push notifications
+
+make .thumb:active work properly (turn off
 app.showPage("howtoplay")
 gamemanager settings
 game settings
-make .thumb:active work properly (turn off
-images (icon, splash)
-disable scrolling when not needed
 sound effects
 app.toggleSounds()
 debug (from settings)
-playtest playtest playtest
-
-- later -
-player images
+in-app purchases
 
 
+game name??
 
-{
-    webView.backgroundColor = [UIColor whiteColor];
-    for (UIView* subView in [webView subviews])
-    {
-        if ([subView isKindOfClass:[UIScrollView class]]) {
-            for (UIView* shadowView in [subView subviews])
-            {
-                if ([shadowView isKindOfClass:[UIImageView class]]) {
-                    [shadowView setHidden:YES];
-                }
-            }
-        }
-    }
-}
+
+
+- plugin instructions -
+
+from:
+
+ theWebView.backgroundColor = [UIColor blackColor];
+
+to:
+
+  theWebView.backgroundColor = [UIColor whiteColor];
+  for (UIView* subView in [theWebView subviews])
+  {
+      if ([subView isKindOfClass:[UIScrollView class]]) {
+          for (UIView* shadowView in [subView subviews])
+          {
+              if ([shadowView isKindOfClass:[UIImageView class]]) {
+                  [shadowView setHidden:YES];
+              }
+          }
+      }
+  }

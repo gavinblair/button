@@ -1,41 +1,67 @@
 var buttonGame = function(){
 
 	buttonGame.prototype.gamecenter = new GameCenter();
+	buttonGame.prototype.settings = {
+		maxScore: 1000*60*2 //2 minutes
+	};
 
-	
+
 	cordova.addConstructor(function() {
 		//cordova is ready, dom might not be
 		setTimeout(function(){
 			var gamecenter = buttonGame.prototype.gamecenter;
-			
+
 			//if we are already logged into the game center, show the game center
 			gamecenter.showLobby();
-			
+
 			gamecenter.startListening(function(data){
-				//we can show the game board and use data to modify it
-				if(data.game == true){
+				if(data.game){
+					//we can show the game board and use data to modify it
 					document.getElementById('container').innerHTML = ich.game();
 
 					myAvatar = counter('myAvatar');
 					theirAvatar = counter('theirAvatar');
-				
+
+					updateVal(data.myScore, myAvatar);
+					updateVal(data.theirScore, theirAvatar);
+
+					data.myTempScore = data.myScore;
+					data.theirTempScore = data.theirScore;
+
+					buttonGame.prototype.timer = setInterval(function(){
+
+						//depending on whose turn it is, update their avatar
+						//we're updating their score, but this is just for show. 
+						//we'll use actual time differences
+						//when it comes to updating the game information
+						var updateAvatar;
+						var updateScore;
+						if(data.turn == 'mine') {
+							updateAvatar = myAvatar;
+							updateScore = data.myTempScore;
+							data.myTempScore--;
+						} else {
+							updateAvatar = theirAvatar;
+							data.theirTempScore--;
+							updateScore = data.theirTempScore;
+						}
+						updateVal(updateScore, updateAvatar);
+
+					}, 1000);
 
 
-
-
-
-		
+				} else if(data.punch){
+					//punch!
+					buttonGame.prototype.punch(document.getElementById('myAvatar'));
 				}
 			});
 		},1000);
 	});
-	
+
 	//dom ready. cordova probably is?
 	document.addEventListener( "DOMContentLoaded", function(){
-	
-		
+
 		var gamecenter = buttonGame.prototype.gamecenter;
-		
 
 		//fastclick
 		new FastClick(document.getElementById('container'));
@@ -83,7 +109,8 @@ var buttonGame = function(){
         return {r: r, sec: sec}
 	}
 
-	function updateVal(value, total, hand) {
+	function updateVal(value, hand) {
+			var total = buttonGame.prototype.settings.maxScore;
       if (!value || value == total) {
           value = total;
           hand.sec.animate({arc: [value, total, 33]}, 750, "bounce", function () {
@@ -92,15 +119,24 @@ var buttonGame = function(){
       } else {
           hand.sec.animate({arc: [value, total, 33]}, 750, "elastic");
       }
+  }
+
+  this.sendTurn = function(){
+  	var gamecenter = buttonGame.prototype.gamecenter;
+  	/**/
   };
 
-  this.punch = function(el) {
-		gamecenter.sendMessage('punch');
+  buttonGame.prototype.punch = function(el) {
+		var gamecenter = buttonGame.prototype.gamecenter;
+
+		if($(el).attr('id') == 'theirAvatar'){
+			gamecenter.sendMessage('punch');
+		}
 		$(el).removeClass('punch');
 		setTimeout(function(){
 			$(el).addClass('punch');
 		}, 0);
-	}
+	};
 
   function getRandomSarcasticRemark(){
 		if(buttonGame.prototype.state == 'Waiting...') {
