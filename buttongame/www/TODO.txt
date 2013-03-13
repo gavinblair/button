@@ -1,3 +1,5 @@
+-to javascript-
+
 data: "this=that&this=that&this=that"
 
 data.game (this is a game board)
@@ -5,10 +7,19 @@ data.game (this is a game board)
 data.myScore (person we're sending to)
 data.theirScore
 
+data.timeTheirTurnEnded (timestamp)
+
 data.turn ('mine' or 'theirs')
 
 data.punch (this is a punch, not a game)
 
+
+-to gamecenter- (send turn)
+
+?? same as above? roles reversed?
+
+
+-to do-
 
 player images
 push notifications
@@ -20,6 +31,7 @@ game settings
 sound effects
 app.toggleSounds()
 debug (from settings)
+differences in time between devices??
 in-app purchases
 
 
